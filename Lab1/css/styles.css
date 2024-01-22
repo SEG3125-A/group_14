@@ -1,0 +1,79 @@
+.gg-instagram {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px
+  }
+
+  .background {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    min-height: 100vh;
+  }
+
+   .gg-instagram::after,
+   .gg-instagram::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute
+   }
+   
+   .gg-instagram::after {
+    border: 2px solid;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 3px
+   }
+   
+   .gg-instagram::before {
+    border-radius: 3px;
+    width: 2px;
+    height: 2px;
+    background: currentColor;
+    right: 1px;
+    top: 1px
+   } 
+
+    .logo-container {
+        position: absolute;
+        top: 10px; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000; /* Ensures it stays on top */
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .header-section {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        margin-top: 50px;
+        margin-bottom: 5px;
+        font-size: 30px;
+      }
+
+    .header-text, question-container {
+        font-family: 'Proxima Nova', sans-serif;
+        font-size: 15px;
+        color: lightgrey;
+    }
+    .question-container {
+        font-family: 'Proxima Nova', sans-serif;
+    }
+
+    .signature {
+        font-family: 'Proxima Nova', sans-serif;
+        color: lightgrey;
+        font-style: italic;
+        font-weight: 100;
+        font-size: 12px;
+    }
