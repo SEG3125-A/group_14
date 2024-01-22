@@ -1,0 +1,39 @@
+body{
+    background-color: #AAD9BB;
+}
+
+
+.navigation{
+    display: flex;
+}
+
+.navlinks{
+    width:33.33%;
+}
+
+
+button {
+  background-color: #80BCBD;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 44px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+}
+
+
+.page{
+    text-align: center;
+}
+
+
+#product_list{
+    display:flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.item{
+    width: 33.33%;
+}
