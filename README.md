@@ -1,1 +1,3 @@
-- [Lab 1](https://faith176.github.io/seg3125/Lab1/)
+- [Labs Menu](https://seg3125-a.github.io/group_14/)
+- [Lab 1](https://seg3125-a.github.io/group_14/Lab1/)
+- [Lab 2](https://seg3125-a.github.io/group_14/Lab2/)
