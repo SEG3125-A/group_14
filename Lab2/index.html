@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <h1>Grocery Store</h1>
+    <h1 class="title">Grocery Store</h1>
     <div class="navigation">
       <button class="navlinks" onclick="showPage(event, 'ClientPage')">
         Client
@@ -23,16 +23,15 @@
     </div>
 
     <div id="ClientPage" class="page">
-      <h1>Client</h1>
-      <form id="ClientPreferences">
-        <h3>Restrictions:</h3>
+      <h1 class="clientTitle">Client</h1>
+      <form id="ClientPreferences" class="clientPage">
+        <h3>Product Restrictions:</h3>
         <label><input type="checkbox" id="vegetarian" /> Vegetarian </label>
         <br />
         <label><input type="checkbox" id="glutenfree" /> Gluten Free </label>
         <br />
         <label>
           <h3>Organic Product Preferences:</h3>
-          <br />
           <select id="OrganicPreferences">
             <br />
             <option value="organic">Organic</option>
@@ -49,19 +48,24 @@
     </div>
 
     <div id="ProductsPage" class="page" display="block">
-      <h1>Products</h1>
+      <h1 class="productsTitle">Products</h1>
       <button onclick="sort('asc')">Sort By Ascending</button>
       <button onclick="sort('desc')">Sort By Descending</button>
       <ul id="product_list"></ul>
     </div>
 
     <div id="CartPage" class="page">
-      <h1>Cart</h1>
+      <h1 class="cartTitle">Cart</h1>
     </div>
-    <span class="signature">
-      <br />
-      Designed By Feyi Adesanya, Tina Trinh, Serena Iyoha
-    </span>
+    <footer>
+      <div class="signature-container">
+        <span class="signature">
+          <br /> 
+          Designed By Feyi Adesanya, Tina Trinh, Serena Iyoha
+        </span>
+      </footer>
+      </div>
+      
   </body>
 
   <!-- javascript -->

@@ -1,5 +1,14 @@
 body{
-    background-color: #AAD9BB;
+    background-color: #a6b489;
+}
+
+.title {
+    font-family: 'Proxima Nova', sans-serif;
+    color: black;
+    font-style: bold;
+    font-size: 52px;
+    text-align: center;
+
 }
 
 
@@ -13,15 +22,17 @@ body{
 
 
 button {
-  background-color: #80BCBD;
-  border-radius: 6px;
-  cursor: pointer;
-  height: 44px;
-  padding: 0 25px;
-  position: relative;
-  text-align: center;
+    font-family: 'Proxima Nova', sans-serif;
+    background-color: #173117;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 44px;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    color: lightgray;
+    
 }
-
 
 .page{
     text-align: center;
@@ -32,16 +43,43 @@ button {
     display:flex;
     flex-wrap: wrap;
     text-align: center;
+    font-family: 'Proxima Nova', sans-serif;
 }
 
-.item{
+.item {
     width: 33.33%;
+}
+
+.clientTitle {
+    font-family: 'Proxima Nova', sans-serif;
+    font-style: italic;
+}
+
+.clientPage {
+    font-family: 'Proxima Nova', sans-serif;
+}
+ 
+.productsTitle {
+    font-family: 'Proxima Nova', sans-serif;
+    font-style: italic;
+}
+
+.cartTitle {
+    font-family: 'Proxima Nova', sans-serif;
+    font-style: italic;
 }
 
 .signature {
     font-family: 'Proxima Nova', sans-serif;
-    color: lightgrey;
+    color: darkslategrey;
     font-style: italic;
-    font-weight: 100;
+    font-weight: 200;
     font-size: 12px;
+    text-align: center;
+    
+}
+
+.signature-container {
+    display: flex;
+    justify-content: center;
 }
