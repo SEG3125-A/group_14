@@ -37,3 +37,11 @@ button {
 .item{
     width: 33.33%;
 }
+
+.signature {
+    font-family: 'Proxima Nova', sans-serif;
+    color: lightgrey;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 12px;
+}
