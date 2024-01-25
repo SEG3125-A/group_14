@@ -8,9 +8,7 @@ body{
     font-style: bold;
     font-size: 52px;
     text-align: center;
-
 }
-
 
 .navigation{
     display: flex;
@@ -19,7 +17,6 @@ body{
 .navlinks{
     width:33.33%;
 }
-
 
 button {
     font-family: 'Proxima Nova', sans-serif;
@@ -30,14 +27,12 @@ button {
     padding: 0 25px;
     position: relative;
     text-align: center;
-    color: lightgray;
-    
+    color: lightgray;    
 }
 
 .page{
     text-align: center;
 }
-
 
 #product_list{
     display:flex;
@@ -76,7 +71,6 @@ button {
     font-weight: 200;
     font-size: 12px;
     text-align: center;
-    
 }
 
 .signature-container {
