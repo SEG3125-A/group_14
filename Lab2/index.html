@@ -41,7 +41,7 @@
         <br />
         <br />
         <br />
-        <button type="button" onclick="updatePreferences()">
+        <button type="button" onclick="updatePreferences(event)">
           Update Preferences
         </button>
       </form>
@@ -55,7 +55,23 @@
     </div>
 
     <div id="CartPage" class="page">
-      <h1 class="cartTitle">Cart</h1>
+      <h1>Cart</h1>
+      <div class="row">
+          <div class="column" id="productName">
+              <h3> Product Name</h3>
+              <p id="product_entries"></p>
+          </div>
+          <div class="column" id="prices">
+              <h3> Price</h3>
+              <p id="price_entries"></p>
+          </div>
+          <div class="column" id="quantity">
+              <h3>Quantity</h3>
+              <p id="quantity_entries"></p>
+          </div>
+      </div>
+      <ul id="cart"> </ul>
+      <p id="totalPrice"> Your total is: $0.0 </p>
     </div>
     <footer>
       <div class="signature-container">
