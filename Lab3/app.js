@@ -11,7 +11,6 @@ function showPage(evt, pageName) {
 
 //Predefined products avaliable on the website
 const products = [
-
     {id:1, name: "Cereal", price:4, vegetarian: true, glutenfree: false, organic: false},
     {id:2, name: "Jam", price:2.75, vegetarian: true, glutenfree: false, organic: true},
     {id:3, name: "Eggs", price:12, vegetarian: false, glutenfree: false, organic: false},
@@ -23,6 +22,7 @@ const products = [
     {id:9, name: "Olive Oil", price:8, vegetarian: true, glutenfree: true, organic: true},
     {id:10, name: "Butter", price:8, vegetarian: false, glutenfree: false, organic: false},    
 ]
+let filteredProducts = products
 
 
 function createProductList(productArray) {
@@ -47,22 +47,17 @@ function createProductList(productArray) {
     });
 }
 
-
 function sort(target) {
-
-    const productsList = document.getElementById("product_list")
-    if (target == "asc") {
-        products.sort((a,b)=> a.price - b.price)
-    }
-    else {
-        products.sort((a,b)=> b.price - a.price)
-    }
-    productsList.innerHTML = ""
-    createProductList(products);
+  const productsList = document.getElementById("product_list")
+  if (target == "asc") {
+    filteredProducts.sort((a,b)=> a.price - b.price)
+  }
+  else {
+    filteredProducts.sort((a,b)=> b.price - a.price)
+  }
+  productsList.innerHTML = ""
+  createProductList(filteredProducts);
 }
-
-
-createProductList(products)
 
 function updatePreferences() {
     event.preventDefault();
@@ -70,19 +65,17 @@ function updatePreferences() {
     const vegetarian = document.getElementById('vegetarian').checked;
     const glutenFree = document.getElementById('glutenfree').checked;
     const organicPreference = document.getElementById('OrganicPreferences').value;
-    
     filterAndDisplayProducts(vegetarian, glutenFree, organicPreference);
   }
   
   function filterAndDisplayProducts(vegetarian, glutenFree, organic) {
-    const filteredProducts = products.filter(product => {
-      const meetsVegetarian = !vegetarian || product.vegetarian;
-      const meetsGlutenFree = !glutenFree || product.glutenfree;
-      const meetsOrganic = (organic === 'either' || organic === 'both') || 
-                           (product.organic && organic === 'organic') || 
-                           (!product.organic && organic === 'notorganic');
-  
-      return meetsVegetarian && meetsGlutenFree && meetsOrganic;
+    filteredProducts = products.filter(product => {
+    const meetsVegetarian = !vegetarian || product.vegetarian;
+    const meetsGlutenFree = !glutenFree || product.glutenfree;
+    const meetsOrganic = (organic === 'either' || organic === 'both') || 
+                          (product.organic && organic === 'organic') || 
+                          (!product.organic && organic === 'notorganic');
+    return meetsVegetarian && meetsGlutenFree && meetsOrganic;
     });
   
     createProductList(filteredProducts);
@@ -91,23 +84,18 @@ function updatePreferences() {
   let cart = [];
 
   function addToCart(product) {
-  
-      //checking if we already added the product to the cart 
+    //checking if we already added the product to the cart 
     const existingProduct = cart.find((item) => item.id === product.id);
-  
     if (existingProduct) {
       existingProduct.quantity++
     } else {
       product.quantity = 1
       cart.push(product)
     }
-  
     const productList = document.getElementById("cart")
   
     // Update the display for the cart
     updateCartDisplay(productList)
-  
-  
     //updates the calculation for the total price
     let price = document.getElementById("totalPrice")
     price.innerHTML = "Your total : " + getTotalPrice(cart)
@@ -146,19 +134,16 @@ function updatePreferences() {
   
   
   
-  
-  
-  function getTotalPrice(chosenProducts) {
-    
-  
-      let totalPrice = 0;
-      cart.forEach(prod => {
-          totalPrice+= prod.price * prod.quantity
-      })
-       //console.log("total cost", totalPrice)
-      return totalPrice;
+function getTotalPrice(chosenProducts) {
+    let totalPrice = 0;
+    cart.forEach(prod => {
+        totalPrice+= prod.price * prod.quantity
+    })
+    return totalPrice;
   }
 
 
+createProductList(products)
 showPage(_, "ClientPage")
+
 
