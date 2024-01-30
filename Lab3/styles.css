@@ -27,7 +27,8 @@ button {
     padding: 0 25px;
     position: relative;
     text-align: center;
-    color: lightgray;    
+    color: lightgray;  
+    margin-top: 5px;  
 }
 
 .page{
@@ -77,3 +78,51 @@ button {
     display: flex;
     justify-content: center;
 }
+
+
+.breadcrumbs {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .breadcrumb-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #173117;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .breadcrumb-name {
+    color: #333;
+    font-weight:bold;
+  }
+
+  .breadcrumb-line {
+    flex: 1;
+    height: 2px;
+    background-color: #173117;
+    margin: 0 10px;
+  }
+
+  .breadcrumb-item:hover .breadcrumb-number {
+    background-color: #173117;
+  }

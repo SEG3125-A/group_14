@@ -10,16 +10,21 @@
 
   <body>
     <h1 class="title">Grocery Store</h1>
-    <div class="navigation">
-      <button class="navlinks" onclick="showPage(event, 'ClientPage')">
-        Client
-      </button>
-      <button class="navlinks" onclick="showPage(event, 'ProductsPage')">
-        Products
-      </button>
-      <button class="navlinks" onclick="showPage(event, 'CartPage')">
-        Cart
-      </button>
+    <div class="breadcrumbs">
+      <div class="breadcrumb-item" onclick="showPage('ClientPage')">
+        <div class="breadcrumb-number">1</div>
+        <div class="breadcrumb-name">Client</div>
+      </div>
+      <div class="breadcrumb-line"></div>
+      <div class="breadcrumb-item" onclick="showPage('ProductsPage')">
+        <div class="breadcrumb-number">2</div>
+        <div class="breadcrumb-name">Products</div>
+      </div>
+      <div class="breadcrumb-line"></div>
+      <div class="breadcrumb-item" onclick="showPage('CartPage')">
+        <div class="breadcrumb-number">3</div>
+        <div class="breadcrumb-name">Cart</div>
+      </div>
     </div>
 
     <div id="ClientPage" class="page" style="display: block;">
@@ -42,17 +47,26 @@
         <br />
         <br />
         <br />
-        <button type="button" onclick="updatePreferences(event)">
+        <button type="button" onclick="filterAndDisplayProducts()">
           Update Preferences
         </button>
       </form>
+      <button class="next-button" onclick="showPage('ProductsPage')">Next</button>
     </div>
 
     <div id="ProductsPage" class="page" style="display: none;">
       <h1 class="productsTitle">Products</h1>
-      <button onclick="sort('asc')">Sort By Ascending</button>
-      <button onclick="sort('desc')">Sort By Descending</button>
+      <button onclick="filterAndDisplayProducts('asc')">Sort By Ascending</button>
+      <button onclick="filterAndDisplayProducts('desc')">Sort By Descending</button>
+      <div class="filter-container">
+        <label style="font-weight:bold;" for="food-filter" class="filter-label">Select Food Types:</label>
+        <div id="food-filter">
+          <!-- Generate checkboxes dynamically based on product_types -->
+          <!-- You can use JavaScript to loop through product_types and create checkboxes -->
+        </div>
+      </div>
       <ul id="product_list"></ul>
+      <button class="next-button"onclick="showPage('CartPage')">Next</button>
     </div>
 
     <div id="CartPage" class="page" style="display: none;">

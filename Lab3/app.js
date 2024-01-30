@@ -1,87 +1,121 @@
 // Swaps between pages in the website
-function showPage(evt, pageName) {
-
-    console.log("Swapping Pages")
-    document.querySelectorAll(".page").forEach(page => {
-        console.log(page)
-        page.style.display = 'none'
-    })
-    document.getElementById(pageName).style.display = 'block'
+function showPage(pageName) {
+  document.querySelectorAll(".page").forEach(page => {
+      page.style.display = 'none';
+  });
+  document.getElementById(pageName).style.display = 'block';
+  // Reset filters and display all products when switching to the ClientPage
+  if (pageName == "ClientPage") {
+    filteredProducts = products;
+    createProductList(filteredProducts);
+  }
+  
+ 
 }
+
+const product_types = [
+  "Vegetable",
+  "Dairy",
+  "Grain",
+  "Fruit",
+  "Oil",
+];
 
 //Predefined products avaliable on the website
 const products = [
-    {id:1, name: "Cereal", price:4, vegetarian: true, glutenfree: false, organic: false},
-    {id:2, name: "Jam", price:2.75, vegetarian: true, glutenfree: false, organic: true},
-    {id:3, name: "Eggs", price:12, vegetarian: false, glutenfree: false, organic: false},
-    {id:4, name: "Milk", price:3, vegetarian: false, glutenfree: false, organic: false},
-    {id:5, name: "Flour", price:6, vegetarian: true, glutenfree: false, organic: true},
-    {id:6, name: "Carrots", price:1.5, vegetarian: true, glutenfree: true, organic: true},
-    {id:7, name: "Onions", price:3.5, vegetarian: true, glutenfree: true, organic: true},
-    {id:8, name: "Bread", price:3, vegetarian: true, glutenfree: false, organic: false},
-    {id:9, name: "Olive Oil", price:8, vegetarian: true, glutenfree: true, organic: true},
-    {id:10, name: "Butter", price:8, vegetarian: false, glutenfree: false, organic: false},    
+    {id:1, name: "Cereal", price:4, vegetarian: true, glutenfree: false, organic: false, type:"Grain"},
+    {id:2, name: "Jam", price:2.75, vegetarian: true, glutenfree: false, organic: true, type:"Fruit"},
+    {id:3, name: "Eggs", price:12, vegetarian: false, glutenfree: false, organic: false, type:"Dairy"},
+    {id:4, name: "Milk", price:3, vegetarian: false, glutenfree: false, organic: false, type:"Dairy"},
+    {id:5, name: "Flour", price:6, vegetarian: true, glutenfree: false, organic: true, type:"Grain"},
+    {id:6, name: "Carrots", price:1.5, vegetarian: true, glutenfree: true, organic: true, type:"Vegetable"},
+    {id:7, name: "Onions", price:3.5, vegetarian: true, glutenfree: true, organic: true, type:"Vegetable"},
+    {id:8, name: "Bread", price:3, vegetarian: true, glutenfree: false, organic: false, type:"grain"},
+    {id:9, name: "Olive Oil", price:8, vegetarian: true, glutenfree: true, organic: true, type:"Oil"},
+    {id:10, name: "Butter", price:8, vegetarian: false, glutenfree: false, organic: false, type:"Dairy"},    
 ]
-let filteredProducts = products
+let filteredProducts = products;
 
+function createFoodCategories() {
+    const foodFilterContainer = document.getElementById("food-filter");
+    product_types.forEach((type) => {
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.value = type;
+        checkbox.id = type;
+        checkbox.className = "filter-checkbox";
+        checkbox.addEventListener("change", filterAndDisplayProducts);
 
-function createProductList(productArray) {
+        const label = document.createElement("label");
+        label.htmlFor = type;
+        label.innerText = type;
+
+        foodFilterContainer.appendChild(checkbox);
+        foodFilterContainer.appendChild(label);
+    });
+}
+
+function createProductList(productArray, sort) {
     const productsList = document.getElementById("product_list");
     productsList.innerHTML = ""; // Clear existing products
+    
+    // Sort array before creating it on the page
+    if (sort === "asc") {
+      productArray = productArray.sort((a, b) => a.price - b.price);
+    } 
+    if (sort==="desc") {
+      productArray = productArray.sort((a, b) => b.price - a.price);
+    }
 
-    productArray.forEach(prod => { // Use 'productArray' instead of 'products'
+    productArray.forEach(prod => {
         const item = document.createElement("div");
         item.innerHTML = `
             <h3>${prod.name}</h3>
             <img height="150px" width="200px" src="\images\\${prod.id}.jpeg" alt="${prod.name}">
             <p>$${prod.price} CAD</p>
-            <button id= "addToCartBtn">Add ${prod.name} to Cart</button>
-            `;
+            <button id="addToCartBtn">Add ${prod.name} to Cart</button>
+        `;
         item.id = prod.id;
         item.classList.add("item");
         productsList.appendChild(item);
 
         const addToCartBtn = item.querySelector("#addToCartBtn");
-        addToCartBtn.addEventListener("click", () => addToCart(prod))
-
+        addToCartBtn.addEventListener("click", () => addToCart(prod));
     });
 }
 
-function sort(target) {
-  const productsList = document.getElementById("product_list")
-  if (target == "asc") {
-    filteredProducts.sort((a,b)=> a.price - b.price)
+function filterAndDisplayProducts(sort="") {
+  const vegetarian = document.getElementById('vegetarian').checked;
+  const glutenFree = document.getElementById('glutenfree').checked;
+  const organicPreference = document.getElementById('OrganicPreferences').value;
+
+  // Directly filter products based on preferences
+  const preferenceFilteredProducts = products.filter(product => {
+      const meetsVegetarian = !vegetarian || product.vegetarian;
+      const meetsGlutenFree = !glutenFree || product.glutenfree;
+      const meetsOrganic = (organicPreference === 'either' || organicPreference === 'both') ||
+          (product.organic && organicPreference === 'organic') ||
+          (!product.organic && organicPreference === 'notorganic');
+      return meetsVegetarian && meetsGlutenFree && meetsOrganic;
+  });
+
+  const foodFilterContainer = document.getElementById("food-filter");
+  const selectedTypes = Array.from(foodFilterContainer.querySelectorAll('input:checked')).map(checkbox => checkbox.value);
+
+  if (selectedTypes.length > 0) {
+        // Filter by both preferences and categories
+        const categoryFilteredProducts = preferenceFilteredProducts.filter(product => selectedTypes.includes(product.type));
+        createProductList(categoryFilteredProducts, sort);
+        showPage("ProductsPage")
+  } else {
+      // Show all products filtered by preferences when no categories are selected
+      createProductList(preferenceFilteredProducts, sort);
+      showPage("ProductsPage")
   }
-  else {
-    filteredProducts.sort((a,b)=> b.price - a.price)
-  }
-  productsList.innerHTML = ""
-  createProductList(filteredProducts);
+  
 }
 
-function updatePreferences() {
-    event.preventDefault();
-
-    const vegetarian = document.getElementById('vegetarian').checked;
-    const glutenFree = document.getElementById('glutenfree').checked;
-    const organicPreference = document.getElementById('OrganicPreferences').value;
-    filterAndDisplayProducts(vegetarian, glutenFree, organicPreference);
-  }
-  
-  function filterAndDisplayProducts(vegetarian, glutenFree, organic) {
-    filteredProducts = products.filter(product => {
-    const meetsVegetarian = !vegetarian || product.vegetarian;
-    const meetsGlutenFree = !glutenFree || product.glutenfree;
-    const meetsOrganic = (organic === 'either' || organic === 'both') || 
-                          (product.organic && organic === 'organic') || 
-                          (!product.organic && organic === 'notorganic');
-    return meetsVegetarian && meetsGlutenFree && meetsOrganic;
-    });
-  
-    createProductList(filteredProducts);
-  }
-  
-  let cart = [];
+let cart = [];
 
   function addToCart(product) {
     //checking if we already added the product to the cart 
@@ -143,7 +177,8 @@ function getTotalPrice(chosenProducts) {
   }
 
 
-createProductList(products)
-showPage(_, "ClientPage")
+createProductList(products);
+createFoodCategories();
+showPage("ClientPage");
 
 
