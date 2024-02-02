@@ -26,9 +26,16 @@
         <div class="breadcrumb-name">Cart</div>
       </div>
     </div>
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
 
     <div id="ClientPage" class="page" style="display: block;">
-      <h1 class="clientTitle">Client</h1>
+      <h1 class="clientTitle">Home</h1>
       <form id="ClientPreferences" class="clientPage">
         <h3>Product Restrictions:</h3>
         <label><input type="checkbox" id="vegetarian" /> Vegetarian </label>
@@ -55,12 +62,19 @@
     </div>
 
     <div id="ProductsPage" class="page" style="display: none;">
-      <h1 class="productsTitle">Products</h1>
+      <h1 class="productsTitle">Groceries</h1>
 
       <!-- Realign sort buttons -->
       <div class="sort-buttons">
-        <button onclick="filterAndDisplayProducts('asc')">Sort By Ascending</button>
-        <button onclick="filterAndDisplayProducts('desc')">Sort By Descending</button>
+        
+        <div class="dropdown" style="float:right">
+          <button class="dropbtn">Sort</button>
+          <div class="dropdown-content">
+            <button onclick="filterAndDisplayProducts('asc')">Sort By Ascending</button>
+            <button onclick="filterAndDisplayProducts('desc')">Sort By Descending</button>
+          </div>
+        </div>
+
     </div>
 
       <div class="filter-container">
