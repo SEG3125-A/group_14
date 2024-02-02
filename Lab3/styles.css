@@ -128,27 +128,22 @@ button {
     
   }
 
-/*Highlight breadcrumb line*/
-  .breadcrumb-active .breadcrumb-number {
-    background-color: #173117; /* Active state background color */
-}
-
-.breadcrumb-active .breadcrumb-name {
+  .breadcrumb-active .breadcrumb-number, .breadcrumb-active .breadcrumb-name {
     font-weight: bold; /* Make the active breadcrumb text bold */
+    background-color: #173117;
+    color: white;
 }
 
-.breadcrumb-item:hover .breadcrumb-number,
-.breadcrumb-item:hover .breadcrumb-name {
+  .breadcrumb-item:hover .breadcrumb-number,
+  .breadcrumb-item:hover .breadcrumb-name {
     background-color: #173117; /* Hover effect for breadcrumb item */
     color: white;
 }
 
-.breadcrumb-item:hover .breadcrumb-line {
+  .breadcrumb-item:hover .breadcrumb-line {
     background-color: #0f1d0f; /* Hover effect for the line */
 }
-
-
-  
+ 
 /* font change */
   .CartTitle {
     color: black;

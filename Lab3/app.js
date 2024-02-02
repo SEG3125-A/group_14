@@ -48,6 +48,21 @@ function highlightBreadcrumb(pageName) {
       item.classList.remove('breadcrumb-active');
   });
 
+   // Determine the active breadcrumb item based on the pageName
+  let activeBreadcrumb;
+  if (pageName.includes('ClientPage')) {
+    activeBreadcrumb = document.querySelector('.breadcrumb-item:nth-child(1)');
+  } else if (pageName.includes('ProductsPage')) {
+    activeBreadcrumb = document.querySelector('.breadcrumb-item:nth-child(3)');
+  } else if (pageName.includes('CartPage')) {
+    activeBreadcrumb = document.querySelector('.breadcrumb-item:nth-child(5)');
+  }
+
+  // Add the 'breadcrumb-active' class to the active breadcrumb item
+  if (activeBreadcrumb) {
+    activeBreadcrumb.classList.add('breadcrumb-active');
+  }
+
   // Map pageName to breadcrumb item index
   const breadcrumbIndexMap = {
       'Client': 0,
@@ -63,6 +78,7 @@ function highlightBreadcrumb(pageName) {
       breadcrumbItems[activeIndex].classList.add('breadcrumb-active');
   }
 }
+
 
 function createFoodCategories() {
     const foodFilterContainer = document.getElementById("food-filter");
