@@ -30,11 +30,21 @@
     <div id="ClientPage" class="page" style="display: block;">
       <h1 class="clientTitle">Home</h1>
       <form id="ClientPreferences" class="clientPage">
-        <h3>Product Restrictions:</h3>
+
+        <!-- REMOVING RESTRICTIONS FOR NOW DUE TO REDUNDANCY -->
+        <!-- <h3>Product Restrictions:</h3>
+
         <label><input type="checkbox" id="vegetarian" /> Vegetarian </label>
         <br />
-        <label><input type="checkbox" id="glutenfree" /> Gluten Free </label>
+        <label><input type="checkbox" id="glutenfree" /> Gluten Free </label> -->
+
+        <label style="font-weight:bold;" for="food-filter" class="filter-label">Select Food Types:</label>
         <br />
+        <div id="food-filter">
+          <br>
+          <!-- Generate checkboxes dynamically based on product_types -->
+          <!-- You can use JavaScript to loop through product_types and create checkboxes -->
+        </div>
         <label>
           <h3>Organic Product Preferences:</h3>
           <select id="OrganicPreferences">
@@ -54,30 +64,33 @@
       <button class="next-button" onclick="showPage('ProductsPage')">Next</button>
     </div>
 
-    <div id="ProductsPage" class="page" style="display: none;">
+    <div id="ProductsPage" class="page">
       <h1 class="productsTitle">Groceries</h1>
-
-      <!-- Realign sort buttons -->
-      <div class="sort-buttons">
+      <div class="checkbox-container">
+        <label class="ProductPreferences">
+          <h3>Organic Product Preferences:</h3>
+          <select class="checkbox-container"id="OrganicPreferences" style="display:left">
+            <br />
+            <option value="organic">Organic</option>
+            <option value="notorganic">Non Organic</option>
+            <option value="both">No Preference</option>
+          </select>
+        </label>
+        <div class="sort-buttons">
         
-        <div class="dropdown" style="float:right">
-          <button class="dropbtn">Sort</button>
-          <div class="dropdown-content">
-            <button onclick="filterAndDisplayProducts('asc')">Sort By Ascending</button>
-            <button onclick="filterAndDisplayProducts('desc')">Sort By Descending</button>
-          </div>
+          <div class="dropdown" style="float:right">
+            <button class="dropbtn">Sort</button>
+            <div class="dropdown-content">
+              <button onclick="filterAndDisplayProducts('asc')">Sort By Ascending</button>
+              <button onclick="filterAndDisplayProducts('desc')">Sort By Descending</button>
+            </div>
         </div>
-
-    </div>
+  
+        </div>
+      </div>
 
       <div class="filter-container">
         <br>
-        <label style="font-weight:bold;" for="food-filter" class="filter-label">Select Food Types:</label>
-        <div id="food-filter">
-          <br>
-          <!-- Generate checkboxes dynamically based on product_types -->
-          <!-- You can use JavaScript to loop through product_types and create checkboxes -->
-        </div>
       </div>
       <ul id="product_list"></ul>
       <button class="next-button"onclick="showPage('CartPage')">Next</button>

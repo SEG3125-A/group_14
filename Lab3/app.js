@@ -79,7 +79,6 @@ function highlightBreadcrumb(pageName) {
   }
 }
 
-
 function createFoodCategories() {
     const foodFilterContainer = document.getElementById("food-filter");
     product_types.forEach((type) => {

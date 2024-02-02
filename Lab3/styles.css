@@ -1,239 +1,244 @@
 body{
-    background-color: #a6b489;
+  background-color: #a6b489;
 }
 
 .title {
-    font-family: 'Proxima Nova', sans-serif;
-    color: black;
-    font-style: bold;
-    font-size: 52px;
-    text-align: center;
+  font-family: 'Proxima Nova', sans-serif;
+  color: black;
+  font-style: bold;
+  font-size: 52px;
+  text-align: center;
 }
 
 .navigation{
-    display: flex;
+  display: flex;
 }
 
 .navlinks{
-    width:33.33%;
+  width:33.33%;
 }
 
 button {
-    font-family: 'Proxima Nova', sans-serif;
-    background-color: #173117;
-    border-radius: 6px;
-    cursor: pointer;
-    height: 44px;
-    padding: 0 25px;
-    position: relative;
-    text-align: center;
-    color: lightgray;  
-    margin-top: 5px;  
+  font-family: 'Proxima Nova', sans-serif;
+  background-color: #173117;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 44px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  color: lightgray;  
+  margin-top: 5px;  
 }
 
 .page{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* change font */
 #product_list{
-    display:flex;
-    flex-wrap: wrap;
-    text-align: center;
-    font-family: 'Proxima Nova', sans-serif;
+  display:flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 .item {
-    width: 33.33%;
+  width: 33.33%;
 }
 
 .clientTitle {
-    font-family: 'Proxima Nova', sans-serif;
-    font-style: italic;
+  font-family: 'Proxima Nova', sans-serif;
+  font-style: italic;
 }
 
 .clientPage {
-    font-family: 'Proxima Nova', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
- 
+
 .productsTitle {
-    font-family: 'Proxima Nova', sans-serif;
-    font-style: italic;
+  font-family: 'Proxima Nova', sans-serif;
+  font-style: italic;
+}
+
+.ProductPreferences{
+font-family: 'Proxima Nova', sans-serif;
+text-align: left;
 }
 
 /* sort ascending and descending */
 .sort-buttons {
-    display: flex;
-    flex-direction: column;/* Aligns buttons to the right */
-    align-items: flex-end;
-    margin-top: 20px; /* Adds some space above the buttons */
-    flex: 1;
+  display: flex;
+  flex-direction: column;/* Aligns buttons to the right */
+  align-items: flex-end;
+  margin-top: 20px; /* Adds some space above the buttons */
+  flex: 1;
 }
 
 /* font change */
 .filter-label {
-    font-family: 'Proxima Nova', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 .breadcrumbs {
-    background-color: #f2f2f2;
-    padding: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    justify-content: space-between;
-  }
-
-  .breadcrumb-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 60px;
-    text-align: center;
-    cursor: pointer;
-  }
-
-  .breadcrumb-number {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #173117;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    margin-bottom: 5px;
-    font-family: 'Proxima Nova', sans-serif;
-  }
-
-  .breadcrumb-name {
-    color: #333;
-    font-weight:bold;
-    font-family: 'Proxima Nova', sans-serif;
-  }
-
-  .breadcrumb-line {
-    flex: 1;
-    height: 2px;
-    background-color: #173117;
-    margin: 0 10px;
-    font-family: 'Proxima Nova', sans-serif;
-    border-radius: 10px;
-    
-  }
-
-  .breadcrumb-active .breadcrumb-number, .breadcrumb-active .breadcrumb-name {
-    font-weight: bold; /* Make the active breadcrumb text bold */
-    background-color: #173117;
-    color: white;
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-between;
 }
 
-  .breadcrumb-item:hover .breadcrumb-number,
-  .breadcrumb-item:hover .breadcrumb-name {
-    background-color: #173117; /* Hover effect for breadcrumb item */
-    color: white;
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
 }
 
-  .breadcrumb-item:hover .breadcrumb-line {
-    background-color: #0f1d0f; /* Hover effect for the line */
+.breadcrumb-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #173117;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-family: 'Proxima Nova', sans-serif;
 }
- 
+
+.breadcrumb-name {
+  color: #333;
+  font-weight:bold;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.breadcrumb-line {
+  flex: 1;
+  height: 2px;
+  background-color: #173117;
+  margin: 0 10px;
+  font-family: 'Proxima Nova', sans-serif;
+  border-radius: 10px;
+  
+}
+
+.breadcrumb-active .breadcrumb-number, .breadcrumb-active .breadcrumb-name {
+  font-weight: bold; /* Make the active breadcrumb text bold */
+  background-color: #173117;
+  color: white;
+}
+
+.breadcrumb-item:hover .breadcrumb-number,
+.breadcrumb-item:hover .breadcrumb-name {
+  background-color: #173117; /* Hover effect for breadcrumb item */
+  color: white;
+}
+
+.breadcrumb-item:hover .breadcrumb-line {
+  background-color: #0f1d0f; /* Hover effect for the line */
+}
+
 /* font change */
-  .CartTitle {
-    color: black;
-    font-family: 'Proxima Nova', sans-serif;
-    font-style: italic;
-  }
-
-  /* column and row changes for cart page to realign texts*/
-  .column {
-    color: black;
-    font-family: 'Proxima Nova', sans-serif;
-    flex: 2;
-    text-align: center;
-  }
-
-  .row {
-    color: black;
-    font-family: 'Proxima Nova', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 2px solid #ddd; 
+.CartTitle {
+  color: black;
+  font-family: 'Proxima Nova', sans-serif;
+  font-style: italic;
 }
 
-    /* font change */
-  .cart {
-    color: black;
-    font-family: 'Proxima Nova', sans-serif;
-  }
+/* column and row changes for cart page to realign texts*/
+.column {
+  color: black;
+  font-family: 'Proxima Nova', sans-serif;
+  flex: 2;
+  text-align: center;
+}
 
-  /* make total look more polished */
-  .cart-total {
-    font-family: 'Proxima Nova', sans-serif;
-    font-weight: bold;
-    font-style: italic;
-    color: #173117;
-    background-color: #eef5ee;
-    padding: 15px 30px; 
-    border-radius: 10px; 
-    margin: 20px auto;
-    display: inline-block; 
-    justify-content: flex-end;
+.row {
+  color: black;
+  font-family: 'Proxima Nova', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid #ddd; 
+}
+
+  /* font change */
+.cart {
+  color: black;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+/* make total look more polished */
+.cart-total {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: #173117;
+  background-color: #eef5ee;
+  padding: 15px 30px; 
+  border-radius: 10px; 
+  margin: 20px auto;
+  display: inline-block; 
+  justify-content: flex-end;
 }
 
 .signature {
-    font-family: 'Proxima Nova', sans-serif;
-    color: darkslategrey;
-    font-style: italic;
-    font-weight: 200;
-    font-size: 12px;
-    text-align: center;
+  font-family: 'Proxima Nova', sans-serif;
+  color: darkslategrey;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 12px;
+  text-align: center;
 }
 
 .signature-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .dropbtn {
-  background-color: #173117;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  font-family: 'Proxima Nova', sans-serif;
+background-color: #173117;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+font-family: 'Proxima Nova', sans-serif;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+position: relative;
+display: inline-block;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  font-family: 'Proxima Nova', sans-serif;
+display: none;
+position: absolute;
+right: 0;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+font-family: 'Proxima Nova', sans-serif;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1;}
@@ -242,53 +247,62 @@ button {
 
 /* The sidepanel menu */
 .sidepanel {
-  height: 250px; /* Specify a height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0;
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+height: 250px; /* Specify a height */
+width: 0; /* 0 width - change this with JavaScript */
+position: fixed; /* Stay in place */
+z-index: 1; /* Stay on top */
+top: 0;
+left: 0;
+background-color: #111; /* Black*/
+overflow-x: hidden; /* Disable horizontal scroll */
+padding-top: 60px; /* Place content 60px from the top */
+transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
 }
 
 /* The sidepanel links */
 .sidepanel a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #818181;
+display: block;
+transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidepanel a:hover {
-  color: #f1f1f1;
+color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
 .sidepanel .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
 }
 
 /* Style the button that is used to open the sidepanel */
 .openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #2f891fb8;
-  color: white;
-  padding: 10px 15px;
-  border: none;
+font-size: 20px;
+cursor: pointer;
+background-color: #2f891fb8;
+color: white;
+padding: 10px 15px;
+border: none;
 }
 
 .openbtn:hover {
-  background-color: #31a822ae;
+background-color: #31a822ae;
 }
 
+.checkbox-container {
+display: flex; /* Use flexbox for layout */
+align-items: center; /* Align items vertically in the center */
+}
+
+.checkbox-container input[type="checkbox"] {
+margin-right: 10px; /* Add some space between the checkbox and the label */
+/* Align the checkbox to the left */
+}
