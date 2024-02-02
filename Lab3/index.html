@@ -13,12 +13,12 @@
     <div class="breadcrumbs">
       <div class="breadcrumb-item" onclick="showPage('ClientPage')">
         <div class="breadcrumb-number">1</div>
-        <div class="breadcrumb-name">Client</div>
+        <div class="breadcrumb-name">Home</div>
       </div>
       <div class="breadcrumb-line"></div>
       <div class="breadcrumb-item" onclick="showPage('ProductsPage')">
         <div class="breadcrumb-number">2</div>
-        <div class="breadcrumb-name">Products</div>
+        <div class="breadcrumb-name">Groceries</div>
       </div>
       <div class="breadcrumb-line"></div>
       <div class="breadcrumb-item" onclick="showPage('CartPage')">
@@ -28,7 +28,7 @@
     </div>
 
     <div id="ClientPage" class="page" style="display: block;">
-      <h1 class="clientTitle">Client</h1>
+      <h1 class="clientTitle">Home</h1>
       <form id="ClientPreferences" class="clientPage">
         <h3>Product Restrictions:</h3>
         <label><input type="checkbox" id="vegetarian" /> Vegetarian </label>
@@ -55,12 +55,19 @@
     </div>
 
     <div id="ProductsPage" class="page" style="display: none;">
-      <h1 class="productsTitle">Products</h1>
+      <h1 class="productsTitle">Groceries</h1>
 
       <!-- Realign sort buttons -->
       <div class="sort-buttons">
-        <button onclick="filterAndDisplayProducts('asc')">Sort By Ascending</button>
-        <button onclick="filterAndDisplayProducts('desc')">Sort By Descending</button>
+        
+        <div class="dropdown" style="float:right">
+          <button class="dropbtn">Sort</button>
+          <div class="dropdown-content">
+            <button onclick="filterAndDisplayProducts('asc')">Sort By Ascending</button>
+            <button onclick="filterAndDisplayProducts('desc')">Sort By Descending</button>
+          </div>
+        </div>
+
     </div>
 
       <div class="filter-container">
@@ -78,6 +85,7 @@
 
     <div id="CartPage" class="page" style="display: none;">
       <h1 class="CartTitle">Cart</h1>
+      
 
       <!-- Add section for input layout to change dynamically -->
       <section class="cart-items">
