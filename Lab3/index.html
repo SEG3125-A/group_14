@@ -56,11 +56,18 @@
 
     <div id="ProductsPage" class="page" style="display: none;">
       <h1 class="productsTitle">Products</h1>
-      <button onclick="filterAndDisplayProducts('asc')">Sort By Ascending</button>
-      <button onclick="filterAndDisplayProducts('desc')">Sort By Descending</button>
+
+      <!-- Realign sort buttons -->
+      <div class="sort-buttons">
+        <button onclick="filterAndDisplayProducts('asc')">Sort By Ascending</button>
+        <button onclick="filterAndDisplayProducts('desc')">Sort By Descending</button>
+    </div>
+
       <div class="filter-container">
+        <br>
         <label style="font-weight:bold;" for="food-filter" class="filter-label">Select Food Types:</label>
         <div id="food-filter">
+          <br>
           <!-- Generate checkboxes dynamically based on product_types -->
           <!-- You can use JavaScript to loop through product_types and create checkboxes -->
         </div>
@@ -70,8 +77,12 @@
     </div>
 
     <div id="CartPage" class="page" style="display: none;">
-      <h1>Cart</h1>
-      <div class="row">
+      <h1 class="CartTitle">Cart</h1>
+
+      <!-- Add section for input layout to change dynamically -->
+      <section class="cart-items">
+
+        <div class="row">
           <div class="column" id="productName">
               <h3> Product Name</h3>
               <p id="product_entries"></p>
@@ -85,9 +96,14 @@
               <p id="quantity_entries"></p>
           </div>
       </div>
+      </section>
+      
       <ul id="cart"> </ul>
-      <p id="totalPrice"> Your total is: $0.0 </p>
+      <section class="cart-total">
+        <p id="totalPrice"> Your total: $0.0 </p>
+      </section>
     </div>
+
     <footer>
       <div class="signature-container">
         <span class="signature">

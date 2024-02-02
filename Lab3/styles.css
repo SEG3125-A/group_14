@@ -33,8 +33,12 @@ button {
 
 .page{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* change font */
 #product_list{
     display:flex;
     flex-wrap: wrap;
@@ -60,25 +64,19 @@ button {
     font-style: italic;
 }
 
-.cartTitle {
-    font-family: 'Proxima Nova', sans-serif;
-    font-style: italic;
-}
-
-.signature {
-    font-family: 'Proxima Nova', sans-serif;
-    color: darkslategrey;
-    font-style: italic;
-    font-weight: 200;
-    font-size: 12px;
-    text-align: center;
-}
-
-.signature-container {
+/* sort ascending and descending */
+.sort-buttons {
     display: flex;
-    justify-content: center;
+    flex-direction: column;/* Aligns buttons to the right */
+    align-items: flex-end;
+    margin-top: 20px; /* Adds some space above the buttons */
+    flex: 1;
 }
 
+/* font change */
+.filter-label {
+    font-family: 'Proxima Nova', sans-serif;
+}
 
 .breadcrumbs {
     background-color: #f2f2f2;
@@ -86,6 +84,8 @@ button {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
+    border-radius: 10px;
+    justify-content: space-between;
   }
 
   .breadcrumb-item {
@@ -109,11 +109,13 @@ button {
     justify-content: center;
     font-size: 16px;
     margin-bottom: 5px;
+    font-family: 'Proxima Nova', sans-serif;
   }
 
   .breadcrumb-name {
     color: #333;
     font-weight:bold;
+    font-family: 'Proxima Nova', sans-serif;
   }
 
   .breadcrumb-line {
@@ -121,8 +123,72 @@ button {
     height: 2px;
     background-color: #173117;
     margin: 0 10px;
+    font-family: 'Proxima Nova', sans-serif;
+    border-radius: 10px;
+    
   }
 
   .breadcrumb-item:hover .breadcrumb-number {
-    background-color: #173117;
+    background-color: black;
+    font-family: 'Proxima Nova', sans-serif;
   }
+
+  
+/* font change */
+  .CartTitle {
+    color: black;
+    font-family: 'Proxima Nova', sans-serif;
+    font-style: italic;
+  }
+
+  /* column and row changes for cart page to realign texts*/
+  .column {
+    color: black;
+    font-family: 'Proxima Nova', sans-serif;
+    flex: 2;
+    text-align: center;
+  }
+
+  .row {
+    color: black;
+    font-family: 'Proxima Nova', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #ddd; 
+}
+
+    /* font change */
+  .cart {
+    color: black;
+    font-family: 'Proxima Nova', sans-serif;
+  }
+
+  /* make total look more polished */
+  .cart-total {
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #173117;
+    background-color: #eef5ee;
+    padding: 15px 30px; 
+    border-radius: 10px; 
+    margin: 20px auto;
+    display: inline-block; 
+    justify-content: flex-end;
+}
+
+.signature {
+    font-family: 'Proxima Nova', sans-serif;
+    color: darkslategrey;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 12px;
+    text-align: center;
+}
+
+.signature-container {
+    display: flex;
+    justify-content: center;
+}
