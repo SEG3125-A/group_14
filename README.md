@@ -4,6 +4,7 @@ SEG 3125 Repository For All Labs
 Group Members: <br>
 Feyi Adesanya <br>
 Serena Iyoha <br>
+Tara Denaud <br>
 Tina Trinh <br>
 
 TAs: <br>
