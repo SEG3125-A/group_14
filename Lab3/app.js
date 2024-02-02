@@ -1,16 +1,20 @@
 // Swaps between pages in the website
 function showPage(pageName) {
+
   document.querySelectorAll(".page").forEach(page => {
       page.style.display = 'none';
   });
+
   document.getElementById(pageName).style.display = 'block';
+
+  // Highlight the active breadcrumb item
+  highlightBreadcrumb(pageName);
+
   // Reset filters and display all products when switching to the ClientPage
   if (pageName == "ClientPage") {
     filteredProducts = products;
     createProductList(filteredProducts);
   }
-  
- 
 }
 
 const product_types = [
@@ -35,6 +39,30 @@ const products = [
     {id:10, name: "Butter", price:8, vegetarian: false, glutenfree: false, organic: false, type:"Dairy"},    
 ]
 let filteredProducts = products;
+
+// highlight breadcrumb function 
+function highlightBreadcrumb(pageName) {
+
+  // Remove active class from all breadcrumb items
+  document.querySelectorAll('.breadcrumb-item').forEach(item => {
+      item.classList.remove('breadcrumb-active');
+  });
+
+  // Map pageName to breadcrumb item index
+  const breadcrumbIndexMap = {
+      'Client': 0,
+      'Products': 1,
+      'Cart': 2
+  };
+
+  // Add active class to current breadcrumb item
+  const activeIndex = breadcrumbIndexMap[pageName];
+
+  const breadcrumbItems = document.querySelectorAll('.breadcrumb-item');
+  if (breadcrumbItems[activeIndex]) {
+      breadcrumbItems[activeIndex].classList.add('breadcrumb-active');
+  }
+}
 
 function createFoodCategories() {
     const foodFilterContainer = document.getElementById("food-filter");
