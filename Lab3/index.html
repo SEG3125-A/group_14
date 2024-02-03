@@ -31,34 +31,9 @@
       <h1 class="clientTitle">Home</h1>
       <form id="ClientPreferences" class="clientPage">
         <h3>Product Restrictions:</h3>
-
-        <label><input type="checkbox" id="vegetarian" /> Vegetarian </label>
-        <br />
-        <label><input type="checkbox" id="glutenfree" /> Gluten Free </label>
-        <br />
-        <br />
         <label  type="checkbox" style="font-weight:bold;" for="food-filter" class="filter-label">Select Food Types:</label>
-        <br />
         <div id="food-filter">
-          <br>
-          <!-- Generate checkboxes dynamically based on product_types -->
-          <!-- You can use JavaScript to loop through product_types and create checkboxes -->
         </div>
-        <label>
-          <h3>Organic Product Preferences:</h3>
-          <select id="OrganicPreferences">
-            <br />
-            <option value="organic">Organic</option>
-            <option value="notorganic">Non Organic</option>
-            <option value="both">No Preference</option>
-          </select>
-        </label>
-        <br />
-        <br />
-        <br />
-        <button type="button" onclick="filterAndDisplayProducts()">
-          Update Preferences
-        </button>
       </form>
       <button class="next-button" onclick="showPage('ProductsPage')">Next</button>
     </div>
@@ -68,15 +43,15 @@
       <div class="checkbox-container">
         <label class="ProductPreferences">
           <h3>Organic Product Preferences:</h3>
-          <select class="checkbox-container"id="OrganicPreferences" style="display:left">
-            <br />
+          <select class="checkbox-container"id="OrganicPreferences" style="float:center">
             <option value="organic">Organic</option>
             <option value="notorganic">Non Organic</option>
             <option value="both">No Preference</option>
           </select>
         </label>
+
+
         <div class="sort-buttons">
-        
           <div class="dropdown" style="float:right">
             <button class="dropbtn">Sort</button>
             <div class="dropdown-content">

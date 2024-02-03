@@ -18,13 +18,9 @@ function showPage(pageName) {
 }
 
 function addEventListenersForPreferences() {
-    const checkbox_vegetarian = document.getElementById("vegetarian");
-    const checkbox_glutenfree = document.getElementById("glutenfree");
     const select_organic_preferences = document.getElementById("OrganicPreferences");
 
     // Add an event listener to the checkbox
-    checkbox_vegetarian.addEventListener("change", filterAndDisplayProducts)
-    checkbox_glutenfree.addEventListener("change", filterAndDisplayProducts)
     select_organic_preferences.addEventListener("change", filterAndDisplayProducts)
 }
 
@@ -139,18 +135,14 @@ function createProductList(productArray, sort) {
 }
 
 function filterAndDisplayProducts(sort="") {
-  const vegetarian = document.getElementById('vegetarian').checked;
-  const glutenFree = document.getElementById('glutenfree').checked;
   const organicPreference = document.getElementById('OrganicPreferences').value;
 
   // Directly filter products based on preferences
   const preferenceFilteredProducts = products.filter(product => {
-      const meetsVegetarian = !vegetarian || product.vegetarian;
-      const meetsGlutenFree = !glutenFree || product.glutenfree;
       const meetsOrganic = (organicPreference === 'either' || organicPreference === 'both') ||
           (product.organic && organicPreference === 'organic') ||
           (!product.organic && organicPreference === 'notorganic');
-      return meetsVegetarian && meetsGlutenFree && meetsOrganic;
+      return meetsOrganic;
   });
 
   const foodFilterContainer = document.getElementById("food-filter");
@@ -160,11 +152,11 @@ function filterAndDisplayProducts(sort="") {
         // Filter by both preferences and categories
         const categoryFilteredProducts = preferenceFilteredProducts.filter(product => selectedTypes.includes(product.type));
         createProductList(categoryFilteredProducts, sort);
-        // showPage("ProductsPage")
+        showPage("ProductsPage")
   } else {
       // Show all products filtered by preferences when no categories are selected
       createProductList(preferenceFilteredProducts, sort);
-      // showPage("ProductsPage")
+      showPage("ProductsPage")
   }
   
 }
@@ -192,11 +184,6 @@ let cart = [];
   
   function updateCartDisplay(productList) {
     productList.innerHTML = "" // Clear the current display
-    const products = document.getElementById("product_entries")
-    const prices = document.getElementById("price_entries")
-    const quantities = document.getElementById("quantity_entries")
-  
-  
   
     // Update the display for each product in the cart... this is an alternate way of doing the code below
       // they both work but I'm not sure why neither will give me a row
