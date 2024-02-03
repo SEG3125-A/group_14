@@ -17,6 +17,17 @@ function showPage(pageName) {
   }
 }
 
+function addEventListenersForPreferences() {
+    const checkbox_vegetarian = document.getElementById("vegetarian");
+    const checkbox_glutenfree = document.getElementById("glutenfree");
+    const select_organic_preferences = document.getElementById("OrganicPreferences");
+
+    // Add an event listener to the checkbox
+    checkbox_vegetarian.addEventListener("change", filterAndDisplayProducts)
+    checkbox_glutenfree.addEventListener("change", filterAndDisplayProducts)
+    select_organic_preferences.addEventListener("change", filterAndDisplayProducts)
+}
+
 const product_types = [
   "Vegetable",
   "Dairy",
@@ -149,11 +160,11 @@ function filterAndDisplayProducts(sort="") {
         // Filter by both preferences and categories
         const categoryFilteredProducts = preferenceFilteredProducts.filter(product => selectedTypes.includes(product.type));
         createProductList(categoryFilteredProducts, sort);
-        showPage("ProductsPage")
+        // showPage("ProductsPage")
   } else {
       // Show all products filtered by preferences when no categories are selected
       createProductList(preferenceFilteredProducts, sort);
-      showPage("ProductsPage")
+      // showPage("ProductsPage")
   }
   
 }
@@ -232,5 +243,6 @@ function closeNav() {
 createProductList(products);
 createFoodCategories();
 showPage("ClientPage");
+addEventListenersForPreferences();
 
 
