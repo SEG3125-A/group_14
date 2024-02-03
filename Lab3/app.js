@@ -208,7 +208,7 @@ let cart = [];
   
   
   
-function getTotalPrice(chosenProducts) {
+function getTotalPrice() {
     let totalPrice = 0;
     cart.forEach(prod => {
         totalPrice+= prod.price * prod.quantity
