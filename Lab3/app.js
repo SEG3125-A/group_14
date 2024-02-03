@@ -9,12 +9,6 @@ function showPage(pageName) {
 
   // Highlight the active breadcrumb item
   highlightBreadcrumb(pageName);
-
-  // Reset filters and display all products when switching to the ClientPage
-  if (pageName == "ClientPage") {
-    filteredProducts = products;
-    createProductList(filteredProducts);
-  }
 }
 
 function addEventListenersForPreferences() {
