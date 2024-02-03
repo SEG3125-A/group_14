@@ -19,11 +19,11 @@ function addEventListenersForPreferences() {
 }
 
 const product_types = [
-  "Vegetable",
-  "Dairy",
-  "Grain",
-  "Fruit",
-  "Oil",
+  {id:11, name: "Vegetable"},
+  {id:12, name: "Dairy"},
+  {id:13, name: "Grain"},
+  {id:14, name: "Fruit"},
+  {id:15, name: "Oil"},
 ];
 
 //Predefined products avaliable on the website
@@ -82,20 +82,25 @@ function highlightBreadcrumb(pageName) {
 
 function createFoodCategories() {
     const foodFilterContainer = document.getElementById("food-filter");
+    foodFilterContainer.style.display = "block ruby"
     product_types.forEach((type) => {
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
-        checkbox.value = type;
-        checkbox.id = type;
+        checkbox.value = type.name;
+        checkbox.id = type.name;
         checkbox.className = "filter-checkbox";
         checkbox.addEventListener("change", filterAndDisplayProducts);
 
         const label = document.createElement("label");
-        label.htmlFor = type;
-        label.innerText = type;
+        label.htmlFor = type.name;
+        label.innerText = type.name;
 
         foodFilterContainer.appendChild(checkbox);
         foodFilterContainer.appendChild(label);
+        const item = document.createElement("div");
+        item.innerHTML = `<img height="25px" width="30px" src="\images\\${type.id}.jpeg" alt="${type.name}">`;
+        item.style.margin = "5px";
+        foodFilterContainer.appendChild(item);
     });
 }
 
