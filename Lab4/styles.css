@@ -1,0 +1,134 @@
+/* CSS FOR MODAL */
+/* Define colour variables */
+:root {
+    --primary-color: #7A57A4;
+    --background-color: #fcf1fd;
+    --inactive-color: #abb8c3;
+  }
+  
+  /* MODAL CSS */
+  #appt-modal-button{
+    margin-bottom: 10px;
+    background-color: var(--primary-color) !important;
+    color: white !important;
+  }
+  
+  .modal-content{
+    height:700px;
+    display: flex;
+  }
+  
+  .modal_content_container {
+    flex-direction: row !important;
+  }
+  
+  #modal-guide{
+    background-color: var(--background-color);
+    width:30%;
+    height:100%;
+  }
+  
+  /* Modal Guide Section User Progress List */
+  .progress_container{
+    background-color: var(--background-color);
+    text-align: center;
+    outline: none;
+  }
+  
+  #progressList{
+    display:flex;
+    justify-content: space-between;
+    margin:10px;
+  }
+  
+  .progress-item,
+  .progress-item-complete {
+    background-color:var(--inactive-color);
+    border-radius: 25px;
+    position:relative;
+    height:6px;
+    width: 6px;
+    list-style: none;
+  }
+  
+  .progress-item-complete {
+    background-color:var(--primary-color);
+  }
+  
+  /* Modal Guide Section Title */
+  #progressTitle{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color:var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  
+  /* Modal Guide Section Description */
+  #progressDesc{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color:var(--primary-color);
+  }
+  
+  
+  /* MODAL MAIN */
+  #modal_main{
+    background-color: white;
+    width:70%;
+    height:100%;
+  }
+  
+  /* Modal Main Header */
+  #modal_main_header{
+    padding: 15px 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    color:var(--primary-color);
+  }
+
+  #services_container{
+    border:none !important;
+  }
+  
+  
+  /* Calendar Styles */
+  #calendar_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+  }
+  
+  #calendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .pika-button:hover{
+    background-color: var(--primary-color) !important;
+  }
+  
+  #appt-form{
+    text-align: center;
+  }
+  
+  #btn-appt{
+    margin-top: 15px;
+    background-color: var(--primary-color);
+  }
+
+
+/* 
+END OF CSS FOR MODAL */
