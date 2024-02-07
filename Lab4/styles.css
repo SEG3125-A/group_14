@@ -1,3 +1,16 @@
+.body {
+  background-color: #656760; /* Change this to the desired background color */
+}
+
+.navbar-custom {
+  background-color: #ccd8b2; /* Change this to the desired color */
+}
+
+.carousel-item img {
+  width: 100%; /* Set the width of the image to 100% of its container */
+  height: auto; /* Maintain the aspect ratio */
+}
+
 /* CSS FOR MODAL */
 /* Define colour variables */
 :root {
@@ -274,11 +287,11 @@ body {
 }
 
 .custom-prev {
-  left: 10px;
+  left: 40px;
 }
 
 .custom-next {
-  right: 10px;
+  right: 40px;
 }
 
 /* Style the arrow icons (you need to include Font Awesome for this) */
@@ -296,6 +309,8 @@ body {
 
 /* 
 END OF CSS FOR MODAL */
+
+
 
 /* Start Flexbot section code (used for "BOOK HERE") Button*/
 
