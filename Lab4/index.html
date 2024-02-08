@@ -10,6 +10,12 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/css/pikaday.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
   </head>
   <body>
@@ -84,11 +90,113 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+      <br>
+
+      <section class="about-text">
+        <h3>About Us</h3>
+        <p>blah blah blah</p>
+        <hr style="width: 50%" />
+        <h4>Browse Our Styles</h4>
+        <p>
+          We provide top quality braided styles that are customized for each of
+          our customers needs
+        </p> 
+      </section>
+
+      <div class="container">
+        <div class="wrapper">
+          <div class="owl-carousel">
+            <div class="item">
+              <div class="card">
+                <img src="images/-9.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Style 1</h5>
+                  <p class="card-text">
+            Starting at: $300
+                  </p>
+                  <button class="custom-button">Read More...</button>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                <img src="images/-10.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Style 2</h5>
+                  <p class="card-text">
+                    Starting at: $150
+                  </p>
+                  <button class="custom-button">Read More...</button>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                <img src="images/-11.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Style 3</h5>
+                  <p class="card-text">
+                    Starting at: $200
+                  </p>
+                  <button class="custom-button">Read More...</button>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                <img src="images/-12.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Style 4</h5>
+                  <p class="card-text">
+                    Removal at: $180
+                  </p>
+                  <button class="custom-button">Read More...</button>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                <img src="images/-13.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Style 5</h5>
+                  <p class="card-text">
+                    Starting at: $200
+                  </p>
+                  <button class="custom-button">Read More...</button>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                <img src="images/-14.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Style 6</h5>
+                  <p class="card-text">
+                    Starting at: $470 (including dye job)
+                  </p>
+                  <button class="custom-button">Read More...</button>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                <img src="images/-15.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Style 7</h5>
+                  <p class="card-text">
+                    Starting at: $170
+                  </p>
+                  <button class="custom-button">Read More...</button>
+                </div>
+              </div>
+              <button class="custom-prev"><i class="fas fa-chevron-left"></i></button>
+              <button class="custom-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      <br>
 
       <div> 
-        <h3> About Us</h3>
-        <p> blah blah blah</p>
-  
         <div class="card text-left">
           <div class="card-body">
               <h4 class="card-title">Our Location</h4>
@@ -106,11 +214,13 @@
               </div>
           </div>
       </div>
-        
+      <br>
+      
       <!-- MODAL ========================================================== -->
       <section>
-        <button type="button" id="appt-modal-button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="activateApptModal()">
-          Book With Us
+        <h5> Click Here to Book!</h5>
+        <button type="button" id="appt-modal-button" class="book btn-primary" data-toggle="modal" data-target="#myModal" onclick="activateApptModal()">
+          Book Here
         </button>
       
         <!-- Modal -->
@@ -149,5 +259,42 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
-  
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 20,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: true,
+            },
+            600: {
+              items: 2,
+              nav: true,
+            },
+            1000: {
+              items: 3,
+              nav: true,
+              loop: true,
+            },
+          },
+        });
+
+        // Add hover effect to lift up the cards
+        $(".card").hover(
+          function () {
+            $(this).css("transform", "translateY(-5px)");
+          },
+          function () {
+            $(this).css("transform", "translateY(0)");
+          }
+        );
+      });
+    </script>
+    
 </html>

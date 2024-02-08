@@ -182,5 +182,117 @@
   justify-content: flex-end;
 }
 
+body {
+	line-height: 26px;
+	background: #ffffff;
+}
+
+ .wrapper{
+  background-color: #c0eac34d;
+  background-image: linear-gradient(256deg, #79a58bf7 0%, #b8cc84 46%, #68856f 100%);
+	border-radius: 15px;
+	padding: 25px;
+	box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+ }
+
+ .card-img-top{
+	margin: 8px;
+	border-radius: 10px;
+	box-shadow: -5px 10px 15px rgba(0,0,0,0.4);
+ }
+
+ img {
+  width: auto;
+ }
+
+ p {
+  margin-top: 10px;
+ }
+
+ .custom-button{
+	outline: none;
+	border: none;
+	cursor: pointer;
+  align-items: center;
+  text-align: center;
+  display: flex;
+	width: 120px;
+	padding: 8px 12px;
+	background: #adab6f;
+	margin: 25px 25px 0 0;
+  color:#fffffff7;
+	border-radius: 6px;
+  shape-outside: margin-box;
+	font-family: 'Proxima Nova', sans-serif;
+ }
+
+ .custom-button:hover{
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+ }
+
+ .card {
+  position: relative; /* Ensure proper positioning of arrows */
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-container {
+  width: 100%; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  position: relative;
+}
+
+.about-text {
+  text-align: center;
+  display: inline;
+  justify-content: center;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.book btn-primary{
+  display: flex;
+  justify-content: center;
+}
+
+.book btn-primary:hover{
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Add custom arrow button styles */
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.custom-prev {
+  left: 10px;
+}
+
+.custom-next {
+  right: 10px;
+}
+
+/* Style the arrow icons (you need to include Font Awesome for this) */
+.custom-prev i,
+.custom-next i {
+  color: #333; /* Change color as needed */
+}
+
+/* Optionally, you can add hover effects for better user feedback */
+.custom-prev:hover,
+.custom-next:hover {
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent background on hover */
+}
+
+
 /* 
 END OF CSS FOR MODAL */
