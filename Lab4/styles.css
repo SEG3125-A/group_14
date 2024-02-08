@@ -1,12 +1,13 @@
 /* CSS FOR MODAL */
 /* Define colour variables */
 :root {
-    --primary-color: #7A57A4;
-    --background-color: #fcf1fd;
+    --primary-color: #7c9885;
+    --background-color: #ccd8b2;
     --inactive-color: #abb8c3;
   }
   
   /* MODAL CSS */
+  #modal-back-button,
   #appt-modal-button{
     margin-bottom: 10px;
     background-color: var(--primary-color) !important;
@@ -81,6 +82,7 @@
     background-color: white;
     width:70%;
     height:100%;
+    overflow-y: auto;
   }
   
   /* Modal Main Header */
@@ -94,6 +96,11 @@
 
   #services_container{
     border:none !important;
+  }
+
+  .appt-service-item{
+    margin-bottom: 10px !important;
+    background-color:var(--primary-color) !important;
   }
   
   
@@ -129,6 +136,51 @@
     background-color: var(--primary-color);
   }
 
+  .appt-container{
+    overflow-y: scroll;
+  }
+
+  .appt-card{
+    border: none !important;
+  }
+
+  /* column and row changes for cart page to realign texts*/
+.cart-column {
+  color: black;
+  font-family: 'Proxima Nova', sans-serif;
+  flex: 2;
+  text-align: center;
+}
+
+.cart-row {
+  color: black;
+  font-family: 'Proxima Nova', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid #ddd; 
+}
+
+  /* font change */
+.cart {
+  color: black;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+/* make total look more polished */
+.cart-total {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: #173117;
+  background-color: #eef5ee;
+  padding: 15px 30px; 
+  border-radius: 10px; 
+  margin: 20px auto;
+  display: inline-block; 
+  justify-content: flex-end;
+}
 
 /* 
 END OF CSS FOR MODAL */
