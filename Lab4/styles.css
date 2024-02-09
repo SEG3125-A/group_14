@@ -296,3 +296,33 @@ body {
 
 /* 
 END OF CSS FOR MODAL */
+
+/* Start Flexbot section code (used for "BOOK HERE") Button*/
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+}
+/* End Flexbot section code */
+
+/* CSS for "View Map" Button */
+.btn-view-map {
+  background-color: var(--primary-color) !important; /* Override the default Bootstrap primary color */
+  color: white !important; /* Ensure text color is white for contrast */
+  border-color: var(--primary-color) !important; /* Match the border color with the background */
+}
+/* END of CSS for "View Map" Button */
+
+.custom-button {
+  background-color: var(--primary-color) !important; /* Change #yourColorHere to your desired color */
+  color: white; /* Optional: Change text color if needed */
+  border: none; /* Removes any border */
+}
+
+.custom-button:hover, .custom-button:focus {
+  background-color: darken(#7c9885, 10%); /* Slightly darker on hover/focus */
+}
+

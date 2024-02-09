@@ -114,7 +114,7 @@
                   <p class="card-text">
             Starting at: $300
                   </p>
-                  <button class="custom-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button">Read More...</button>
                 </div>
               </div>
             </div>
@@ -126,7 +126,7 @@
                   <p class="card-text">
                     Starting at: $150
                   </p>
-                  <button class="custom-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button">Read More...</button>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@
                   <p class="card-text">
                     Starting at: $200
                   </p>
-                  <button class="custom-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button">Read More...</button>
                 </div>
               </div>
             </div>
@@ -150,7 +150,7 @@
                   <p class="card-text">
                     Removal at: $180
                   </p>
-                  <button class="custom-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button">Read More...</button>
                 </div>
               </div>
             </div>
@@ -162,7 +162,7 @@
                   <p class="card-text">
                     Starting at: $200
                   </p>
-                  <button class="custom-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button">Read More...</button>
                 </div>
               </div>
             </div>
@@ -174,7 +174,7 @@
                   <p class="card-text">
                     Starting at: $470 (including dye job)
                   </p>
-                  <button class="custom-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button">Read More...</button>
                 </div>
               </div>
             </div>
@@ -197,13 +197,13 @@
       <br>
 
       <div> 
-        <div class="card text-left">
+        <div class="card text-center">
           <div class="card-body">
               <h4 class="card-title">Our Location</h4>
               <p> We are located in the University of Ottawa's SITE building!</p>
               <!-- Button to trigger the collapsible -->
-              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#mapCollapse" aria-expanded="false" aria-controls="mapCollapse">
-                  View Map
+              <button class="btn btn-primary btn-view-map" type="button" data-toggle="collapse" data-target="#mapCollapse" aria-expanded="false" aria-controls="mapCollapse">
+                View Map
               </button>
               <!-- Collapsible content -->
               <div class="collapse" id="mapCollapse">
@@ -217,7 +217,7 @@
       <br>
       
       <!-- MODAL ========================================================== -->
-      <section>
+      <section class="center-content">
         <h5> Click Here to Book!</h5>
         <button type="button" id="appt-modal-button" class="book btn-primary" data-toggle="modal" data-target="#myModal" onclick="activateApptModal()">
           Book Here
