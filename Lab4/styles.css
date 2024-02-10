@@ -10,6 +10,26 @@
   width: 100%; /* Set the width of the image to 100% of its container */
   height: auto; /* Maintain the aspect ratio */
 }
+.custom-prev .fas {
+  font-size: 50px; /* Adjust the font size as needed */
+}
+
+.custom-next .fas {
+  font-size: 50px; /* Adjust the font size as needed */
+}
+
+.owl-nav {
+  text-align: center;
+}
+
+.owl-nav button {
+  display: inline-block;
+  font-size: 40px; /* Adjust the font size as needed */
+  width: 40px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  line-height: 40px
+}
+
 
 /* CSS FOR MODAL */
 /* Define colour variables */
