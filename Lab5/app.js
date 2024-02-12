@@ -9,33 +9,36 @@ const appt_steps = [
 ];
 
 const services = [
-  {name: "Box Braids", description: ""},
-  {name: "Knotless Braids", description: ""},
-  {name: "Twist", description: ""},
-  {name: "Stitch Braids", description: ""},
-  {name: "Cornrows", description: ""},
+  {name: "Box Braids", description: "", price: 150},
+  {name: "Knotless Braids", description: "", price: 185},
+  {name: "Twist", description: "", price: 145},
+  {name: "Stitch Braids", description: "", price: 50},
+  {name: "Cornrows", description: "", price: 35},
 ]
 
 const lengths = [
-  {name: "Medium Lower Back", price:150, description: "Hair included"},
-  {name: "Medium Waist", price:100, description: "Hair included"},
-  {name: "Large Lower Back", price:150, description: "Hair included"},
-  {name: "Large Waist", price:100, description: "Hair included"},
-  {name: "Small Pre Parting", price:150, description: "For DIY installations"},
-  {name: "Large Pre Parting", price:100, description: "For DIY installations"},
+  {name: "Medium Lower Back", price_modifier:1.5, description: "Hair included"},
+  {name: "Medium Waist", price_modifier:1, description: "Hair included"},
+  {name: "Large Lower Back", price_modifier:2, description: "Hair included"},
+  {name: "Large Waist", price_modifier:2.5, description: "Hair included"},
+  {name: "Small Pre Parting", price_modifier:0.5, description: "For DIY installations"},
+  {name: "Large Pre Parting", price_modifier:0.75, description: "For DIY installations"},
 ]
 
 const braiders = [
-  {name: "Leah", description: "Braiding for 10+ years, specializes in locs"},
-  {name: "Leah2", description: "Braiding for 2+ years, specializes in marley twist, passion twist, and island twist"},
-  {name: "Leah3", description: "Braiding for 3+ years, specializes in all types of hairstyles"},
+  {name: "Aaliyah", description: "Braiding for 10+ years, specializes in locs"},
+  {name: "Ella", description: "Braiding for 2+ years, specializes in marley twist, passion twist, and island twist"},
+  {name: "Lia", description: "Braiding for 3+ years, specializes in all types of hairstyles"},
 ]
 
 var cart = [];
 var cart_total = 0;
+var price_modifier = 1;
 
 function activateApptModal(){
   currentStep = -1;
+  cart_total = 0;
+  cart = [];
   advance();
 }
 
@@ -95,11 +98,16 @@ function generateProgress() {
     anchor.innerHTML = `
         <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">${service.name}</h5>
+            <div>
+            <small>Prices Starting From:</small>
+            <small>$${service.price}</small>
+            </div>
         </div>
         <p class="mb-1">${service.description}</p>
     `;
     anchor.onclick = function () {
       cart.push(service.name);
+      cart_total = service.price;
       advance();
     };
     //Append to container
@@ -126,13 +134,13 @@ function generateProgress() {
     anchor.innerHTML = `
         <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">${length.name}</h5>
-            <small>$${length.price}</small>
+            <small>$${length.price_modifier*cart_total}</small>
         </div>
         <p class="mb-1">${length.description}</p>
     `;
     anchor.onclick = function () {
       cart.push(length.name);
-      cart_total = length.price;
+      price_modifier = length.price_modifier;
       advance();
     };
     //Append to container
@@ -146,7 +154,7 @@ function generateProgress() {
     modal_back_button = document.getElementById("modal-back-button")
     modal_back_button.onclick = function () {
       cart.pop();
-      cart_total = 0;
+      price_modifier = 1;
       goBack();
     };
   }
@@ -185,7 +193,6 @@ function generateProgress() {
     modal_back_button = document.getElementById("modal-back-button")
     modal_back_button.onclick = function () {
       cart.pop();
-      cart_total = 0;
       goBack();
     };
 
@@ -272,7 +279,7 @@ function generateSummary(){
       </div>
       <div class="cart-column" id="prices">
           <h3> Price</h3>
-          <p id="price_entries">${cart_total}</p>
+          <p id="price_entries">${cart_total*price_modifier}</p>
       </div>
   </div>
   </section>
@@ -307,6 +314,5 @@ function goBack() {
   // Call the function with the example steps
   generateProgress(appt_steps);
   generateServices(appt_steps)
-
 
 // END OF APPOINTMENT MODAL----------------------------------------
