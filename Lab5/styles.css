@@ -139,6 +139,17 @@
   /*Braider Styles */
 
   
+  /* Form Styles */
+  .focused {
+    border: 2px solid #007bff;
+    outline: none; 
+  }
+
+  .error-message{
+    color: red;
+    font-size: 12px;
+  }
+
   
   /* Calendar Styles */
   #calendar_container {

@@ -26,9 +26,9 @@ const lengths = [
 ]
 
 const braiders = [
-  {name: "Aaliyah", description: "Braiding for 10+ years, specializes in locs"},
-  {name: "Ella", description: "Braiding for 2+ years, specializes in marley twist, passion twist, and island twist"},
-  {name: "Lia", description: "Braiding for 3+ years, specializes in all types of hairstyles"},
+  {name: "Aaliyah", description: "Braiding for 10+ years, specializes in locs", disabledDates: [0, 6, 1] },
+  {name: "Ella", description: "Braiding for 2+ years, specializes in marley twist, passion twist, and island twist", disabledDates: [1, 2, 5] },
+  {name: "Lia", description: "Braiding for 3+ years, specializes in all types of hairstyles", disabledDates: [6, 4] },
 ]
 
 var cart = [];
@@ -106,11 +106,10 @@ function generateProgress() {
         <p class="mb-1">${service.description}</p>
     `;
     anchor.onclick = function () {
-      cart.push(service.name);
+      cart.push(service);
       cart_total = service.price;
       advance();
     };
-    //Append to container
     services_container.appendChild(anchor);
     }) 
   }
@@ -139,11 +138,10 @@ function generateProgress() {
         <p class="mb-1">${length.description}</p>
     `;
     anchor.onclick = function () {
-      cart.push(length.name);
+      cart.push(length);
       price_modifier = length.price_modifier;
       advance();
     };
-    //Append to container
     length_container.appendChild(anchor);
     })
 
@@ -184,7 +182,7 @@ function generateProgress() {
           </div>
       `;
       anchor.onclick = function () {
-        cart.push(braider.name);
+        cart.push(braider);
         advance();
     }
     braider_container.append(anchor)
@@ -204,20 +202,35 @@ function generateProgress() {
     modal_main.innerHTML = `
     <div id="modal_main_header">${appt_steps[currentStep].title}</div>
     <form id="appt-form">
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="FullName">Full Name</label>
-            <input class="form-control" id="FullName" placeholder="Full Name">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="Email">Email</label>
-            <input class="form-control" id="Email" placeholder="Email">
-          </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="FullName">Full Name</label>
+          <input class="form-control" id="FullName" placeholder="Full Name" oninput="validateFullName()" onfocus="handleFocus(this)" onblur="handleBlur(this)" required>
+          <div id="fullNameError" class="error-message"></div>
         </div>
+        <div class="form-group col-md-6">
+          <label for="Email">Email</label>
+          <input class="form-control" id="Email" placeholder="Email" oninput="validateEmail()" onfocus="handleFocus(this)" onblur="handleBlur(this)" required>
+          <div id="emailError" class="error-message"></div>
+        </div>
+      </div>
 
-      <div class="form-group">
-        <label id="appt-comments-label" for="appt-comments">Additional Details?</label>
-        <textarea class="appt-comments" id="appt-comments" rows="1"></textarea>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="CreditCard">Credit Card Number</label>
+          <input class="form-control" id="CreditCard" placeholder="Credit Card Number" oninput="validateCreditCard()" onfocus="handleFocus(this)" onblur="handleBlur(this)" required>
+          <div id="creditCardError" class="error-message"></div>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="ExpirationDate">Expiration Date</label>
+          <input class="form-control" id="ExpirationDate" placeholder="MM/YY" oninput="validateExpirationDate()" onfocus="handleFocus(this)" onblur="handleBlur(this)" required>
+          <div id="expirationDateError" class="error-message"></div>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="CVV">CVV</label>
+          <input class="form-control" id="CVV" placeholder="CVV" oninput="validateCVV()" onfocus="handleFocus(this)" onblur="handleBlur(this)" required>
+          <div id="cvvError" class="error-message"></div>
+        </div>
       </div>
 
       <div class="form-row>
@@ -231,8 +244,18 @@ function generateProgress() {
     </form>
     <button type="button" id="modal-back-button" class="btn btn-primary">Back</button>
     `
+  const modal_forward_button = document.getElementById("btn-appt");
+  modal_forward_button.onclick = function() {
+    const errorMessages = document.querySelectorAll('.error-message');
+    const hasErrors = Array.from(errorMessages).some(errorMessage => errorMessage.textContent !== '');
+    const inputs = document.querySelectorAll('input[required]');
+    const isEmpty = Array.from(inputs).some(input => input.value.trim() === '');
+    if (!hasErrors && !isEmpty) {
+      advance();
+    }
+  }
 
-    modal_back_button = document.getElementById("modal-back-button")
+    const modal_back_button = document.getElementById("modal-back-button")
     modal_back_button.onclick = function () {
       cart.pop();
       goBack();
@@ -242,8 +265,12 @@ function generateProgress() {
    // Initialize Pikaday
   var picker = new Pikaday({
   showMonthAfterYear: false,
+  disableDayFn: function (date) {
+    return cart[2].disabledDates.includes(date.getDay())
+  },
   onSelect: function(selectedDate) {
-    handleDateChange(selectedDate);
+      var formattedDate = moment(selectedDate).format('YYYY-MM-DD');
+      document.getElementById('selected-date').textContent = 'Selected Date: ' + formattedDate;
   }
 });
 
@@ -251,10 +278,86 @@ function generateProgress() {
   picker.show();
 }
 
-function handleDateChange(selectedDate) {
-  var formattedDate = moment(selectedDate).format('YYYY-MM-DD');
-  document.getElementById('selected-date').textContent = 'Selected Date: ' + formattedDate;
+function handleFocus(element) {
+    element.classList.add('focused');
 }
+
+function handleBlur(element) {
+    element.classList.remove('focused');
+}
+
+
+// VALIDATION FUNCTIONS-------------------------------
+function validateFullName() {
+  const fullNameInput = document.getElementById('FullName');
+  const fullNameError = document.getElementById('fullNameError');
+
+  // Reset error message
+  fullNameError.textContent = '';
+
+  // Validate Full Name (letters and spaces only)
+  const fullNamePattern = /^[A-Za-z ]+$/;
+  if (!fullNamePattern.test(fullNameInput.value)) {
+    fullNameError.textContent = 'Please enter a valid Full Name (letters and spaces only).';
+  }
+}
+
+function validateEmail() {
+  const emailInput = document.getElementById('Email');
+  const emailError = document.getElementById('emailError');
+
+  // Reset error message
+  emailError.textContent = '';
+
+  // Validate Email using HTML5 email validation
+  if (!emailInput.checkValidity()) {
+    emailError.textContent = 'Please enter a valid email address.';
+  }
+}
+
+
+function validateCreditCard() {
+  const creditCardInput = document.getElementById('CreditCard');
+  const creditCardError = document.getElementById('creditCardError');
+
+  // Reset error message
+  creditCardError.textContent = '';
+
+  // Validate Credit Card Number (for simplicity, assuming 16-digit number)
+  const creditCardPattern = /^\d{16}$/;
+  if (!creditCardPattern.test(creditCardInput.value)) {
+    creditCardError.textContent = 'Please enter a valid 16-digit Credit Card Number.';
+  }
+}
+
+function validateExpirationDate() {
+  const expirationDateInput = document.getElementById('ExpirationDate');
+  const expirationDateError = document.getElementById('expirationDateError');
+
+  // Reset error message
+  expirationDateError.textContent = '';
+
+  // Validate Expiration Date (for simplicity, assuming MM/YY format)
+  const expirationDatePattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
+  if (!expirationDatePattern.test(expirationDateInput.value)) {
+    expirationDateError.textContent = 'Please enter a valid Expiration Date in MM/YY format.';
+  }
+}
+
+function validateCVV() {
+  const cvvInput = document.getElementById('CVV');
+  const cvvError = document.getElementById('cvvError');
+
+  // Reset error message
+  cvvError.textContent = '';
+
+  // Validate CVV (for simplicity, assuming 3-digit number)
+  const cvvPattern = /^\d{3}$/;
+  if (!cvvPattern.test(cvvInput.value)) {
+    cvvError.textContent = 'Please enter a valid 3-digit CVV.';
+  }
+}
+
 
 function generateSummary(){
   const modal_main = document.getElementById('modal_main');
@@ -267,15 +370,15 @@ function generateSummary(){
     <div class="cart-row">
       <div class="cart-column" id="productName">
           <h3> Type</h3>
-          <p id="product_entries">${cart[0]}</p>
+          <p id="product_entries">${cart[0].name}</p>
       </div>
       <div class="cart-column" id="prices">
           <h3> Length</h3>
-          <p id="price_entries">${cart[1]}</p>
+          <p id="price_entries">${cart[1].name}</p>
       </div>
       <div class="cart-column" id="braider">
           <h3> Braider</h3>
-          <p id="braider_entries">${cart[2]}</p>
+          <p id="braider_entries">${cart[2].name}</p>
       </div>
       <div class="cart-column" id="prices">
           <h3> Price</h3>
