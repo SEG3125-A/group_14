@@ -45,6 +45,7 @@
     margin-bottom: 10px;
     background-color: var(--primary-color) !important;
     color: white !important;
+    border-color: var(--primary-color) !important; 
   }
   
   .modal-content{
@@ -128,12 +129,14 @@
   }
 
   #services_container{
-    border:none !important;
+    border:none !important; 
+    
   }
 
   .appt-service-item{
     margin-bottom: 10px !important;
     background-color:var(--primary-color) !important;
+    border-color: var(--primary-color) !important; 
   }
 
   /*Braider Styles */
