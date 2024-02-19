@@ -434,3 +434,15 @@ function goBack() {
   generateServices(appt_steps)
 
 // END OF APPOINTMENT MODAL----------------------------------------
+
+// REDIRECT MODAL FROM CAROUSEL
+function activateApptCarouselModal() {
+  currentStep = 2 - 1; // Subtract 1 because advance() will add 1 to currentStep
+  cart_total = 0;
+  cart = [];
+
+  // Display the modal
+  $('#myModal').modal('show');
+
+  advance(); // This will increment the currentStep and display the "Select Hairstylist" step
+}

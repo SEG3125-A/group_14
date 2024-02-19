@@ -127,9 +127,15 @@
                 <div class="card-body">
                   <h5 class="card-title">Style 1</h5>
                   <p class="card-text">
-            Starting at: $300
+                    <ul>
+
+                      <li> Starting at: $300</li>
+                      <li> Medium to Long Hair Only</li>
+                    </ul>
+      
+        
                   </p>
-                  <button class="custom-button" id="read-more-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button" onclick="activateApptCarouselModal()"> Book this Style </button>
                 </div>
               </div>
             </div>
@@ -139,9 +145,10 @@
                 <div class="card-body">
                   <h5 class="card-title">Style 2</h5>
                   <p class="card-text">
-                    Starting at: $150
+                    <li>Starting at: $150</li>
+                    <li> SHORT HAIR ONLY</li>
                   </p>
-                  <button class="custom-button" id="read-more-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button" onclick="activateApptCarouselModal()"> Book this Style </button>
                 </div>
               </div>
             </div>
@@ -151,9 +158,13 @@
                 <div class="card-body">
                   <h5 class="card-title">Style 3</h5>
                   <p class="card-text">
-                    Starting at: $200
+                    <ul>
+                      <li>Starting at: $200</li>
+                      <li>Length Options: Short, Medium, Long</ul> </li>
+
+                    
                   </p>
-                  <button class="custom-button" id="read-more-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button" onclick="activateApptCarouselModal()"> Book this Style </button>
                 </div>
               </div>
             </div>
@@ -163,9 +174,14 @@
                 <div class="card-body">
                   <h5 class="card-title">Style 4</h5>
                   <p class="card-text">
-                    Removal at: $180
+                    <ul> 
+                      <li> Removal at: $180
+                      </li> 
+                      <li> Includes takedown, wash and blowdry</li>
+                    
+                    </ul>
                   </p>
-                  <button class="custom-button" id="read-more-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button" onclick="activateApptCarouselModal()"> Book this Style </button>
                 </div>
               </div>
             </div>
@@ -175,9 +191,15 @@
                 <div class="card-body">
                   <h5 class="card-title">Style 5</h5>
                   <p class="card-text">
-                    Starting at: $200
+                    <ul>
+                      <li>
+                        Starting at: $200
+                      </li>
+                      <li> All hair lengths</li>
+                      <li> Braiding hair included</li>
+                    </ul>
                   </p>
-                  <button class="custom-button" id="read-more-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button" onclick="activateApptCarouselModal()">Book this Style</button>
                 </div>
               </div>
             </div>
@@ -187,9 +209,13 @@
                 <div class="card-body">
                   <h5 class="card-title">Style 6</h5>
                   <p class="card-text">
-                    Starting at: $470 (including dye job)
+                    <ul> 
+                      <li>Starting at: $470 (including dye job) </li> 
+                      <li> Must have virgin hair</li>
+                    </ul>
+                    
                   </p>
-                  <button class="custom-button" id="read-more-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button" onclick="activateApptCarouselModal()">Book this Style</button>
                 </div>
               </div>
             </div>
@@ -199,9 +225,16 @@
                 <div class="card-body">
                   <h5 class="card-title">Style 7</h5>
                   <p class="card-text">
-                    Starting at: $170
+                    <ul>
+                      <li>
+                        Starting at: $170
+                      </li>
+                      <li>
+                        All hair lenghts
+                      </li>
+                    </ul>
                   </p>
-                  <button class="custom-button">Read More...</button>
+                  <button class="custom-button" id="read-more-button" onclick="activateApptCarouselModal()">Book this Style</button>
                 </div>
               </div>
               <button class="custom-prev"><i class="fas fa-chevron-left"></i></button>
@@ -280,6 +313,8 @@
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+
+
     <script>
       $(document).ready(function () {
         $(".owl-carousel").owlCarousel({
@@ -313,6 +348,7 @@
           }
         );
       });
+
     </script>
     
 </html>
