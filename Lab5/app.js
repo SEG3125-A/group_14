@@ -242,6 +242,7 @@ function generateProgress() {
       </div>
 
       <button type="button" id="modal-back-button" class="btn btn-primary">Back</button>
+      <button id="btn-appt" class="btn btn-primary" onclick="advance()">Next</button>
     </form>
     `;
     

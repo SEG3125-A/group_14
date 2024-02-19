@@ -43,7 +43,9 @@
   
   /* MODAL CSS */
   #modal-back-button,
-  #appt-modal-button{
+  #appt-modal-button, 
+  #btn-appt{
+    margin-top: 15px;
     margin-bottom: 10px;
     background-color: var(--primary-color) !important;
     color: white !important;
@@ -183,10 +185,6 @@
     text-align: center;
   }
   
-  #btn-appt{
-    margin-top: 15px;
-    background-color: var(--primary-color);
-  }
 
   .appt-container{
     overflow-y: scroll;
@@ -436,4 +434,7 @@ END OF CSS FOR MODAL */
   visibility: visible;
 }
 
-
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 3rem;
+}

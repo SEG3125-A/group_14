@@ -103,11 +103,13 @@
       <br>
 
       <section class="about-text">
+        <br>
         <h3 id="anchor1">Our Mission</h3>
         <p>Happy Black History Month!!</p>
         <p>Our hair stylist celebrates the beauty of Black hair with expertise in styles that range from traditional braids to modern cuts. 
           Honoring the rich heritage of Black hairstyling, they craft each look to reflect personal identity and cultural pride. 
           Join us to embrace and express the unique stories woven through each strand.</p>
+        <br>
         <hr style="width: 50%" />
         <h4 id="anchor3">Browse Our Styles</h4>
         <p>
@@ -208,7 +210,32 @@
           </div>
         </div>
       <br>
-
+      <br>
+      <br>
+      <!-- MODAL ========================================================== -->
+      <section class="center-content">
+        <h4> Click Here to Book!</h4>
+        <button type="custom-button" id="appt-modal-button" class="btn btn-primary btn-view-map" data-toggle="modal" data-target="#myModal" onclick="activateApptModal()">
+          Book Here
+        </button>
+      
+        <!-- Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content modal_content_container">
+              <!-- Helper Side Panel -->
+              <div id="modal-guide"></div>
+  
+              <!-- Main Page -->
+              <div id="modal_main"></div>
+      
+            </div>
+          </div>
+        </div>
+      </section>
+      <br>
+      <br>
+      <!-- END OF MODAL ========================================================== -->
       <div> 
         <div class="card text-center">
           <div class="card-body">
@@ -228,30 +255,8 @@
           </div>
       </div>
       <br>
+      <br>
       
-      <!-- MODAL ========================================================== -->
-      <section class="center-content">
-        <h5> Click Here to Book!</h5>
-        <button type="button" id="appt-modal-button" class="btn btn-primary btn-view-map" data-toggle="modal" data-target="#myModal" onclick="activateApptModal()">
-          Book Here
-        </button>
-      
-        <!-- Modal -->
-        <div class="modal" id="myModal">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content modal_content_container">
-              <!-- Helper Side Panel -->
-              <div id="modal-guide"></div>
-  
-              <!-- Main Page -->
-              <div id="modal_main"></div>
-      
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- END OF MODAL ========================================================== -->
-
         <b4-footer>
           <!-- need to add a css element for the signature -->
           <div class="signature-container">
