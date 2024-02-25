@@ -1,3 +1,5 @@
+
+
 .body {
   background-color: #656760; /* Change this to the desired background color */
 }
@@ -41,10 +43,13 @@
   
   /* MODAL CSS */
   #modal-back-button,
-  #appt-modal-button{
+  #appt-modal-button, 
+  #btn-appt{
+    margin-top: 15px;
     margin-bottom: 10px;
     background-color: var(--primary-color) !important;
     color: white !important;
+    border-color: var(--primary-color) !important; 
   }
   
   .modal-content{
@@ -128,12 +133,14 @@
   }
 
   #services_container{
-    border:none !important;
+    border:none !important; 
+    
   }
 
   .appt-service-item{
     margin-bottom: 10px !important;
     background-color:var(--primary-color) !important;
+    border-color: var(--primary-color) !important; 
   }
 
   /*Braider Styles */
@@ -178,10 +185,6 @@
     text-align: center;
   }
   
-  #btn-appt{
-    margin-top: 15px;
-    background-color: var(--primary-color);
-  }
 
   .appt-container{
     overflow-y: scroll;
@@ -230,22 +233,22 @@
 }
 
 body {
-	line-height: 26px;
-	background: #ffffff;
+  line-height: 26px;
+  background: #ffffff;
 }
 
  .wrapper{
   background-color: #c0eac34d;
   background-image: linear-gradient(256deg, #79a58bf7 0%, #b8cc84 46%, #68856f 100%);
-	border-radius: 15px;
-	padding: 25px;
-	box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
  }
 
  .card-img-top{
-	margin: 8px;
-	border-radius: 10px;
-	box-shadow: -5px 10px 15px rgba(0,0,0,0.4);
+  margin: 8px;
+  border-radius: 10px;
+  box-shadow: -5px 10px 15px rgba(0,0,0,0.4);
  }
 
  img {
@@ -257,24 +260,24 @@ body {
  }
 
  .custom-button{
-	outline: none;
-	border: none;
-	cursor: pointer;
+  outline: none;
+  border: none;
+  cursor: pointer;
   align-items: center;
   text-align: center;
   display: flex;
-	width: 120px;
-	padding: 8px 12px;
-	background: #adab6f;
-	margin: 25px 25px 0 0;
+  width: 130px;
+  padding: 8px 12px;
+  background: #adab6f;
+  margin: 25px 25px 0 0;
   color:#fffffff7;
-	border-radius: 6px;
+  border-radius: 6px;
   shape-outside: margin-box;
-	font-family: 'Proxima Nova', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
  }
 
  .custom-button:hover{
-	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
  }
 
  .card {
@@ -375,3 +378,63 @@ END OF CSS FOR MODAL */
   background-color: darken(#7c9885, 10%); /* Slightly darker on hover/focus */
 }
 
+.nav-link {
+  position: relative; /* Added this line */
+  display: inline-block; /* Ensure the anchor behaves as a container */
+}
+
+.hover-services {
+  position: absolute;
+  bottom: 120%; /* Positions the text right above the image */
+  left: 50%; /* Starts the text from the middle of the image */
+  transform: translateX(-50%); /* Centers the text above the image */
+  visibility: hidden;
+  color: white;
+  background-color: #79a58bf7;
+  padding: 5px;
+  border-radius: 10px;
+  white-space: nowrap; /* Keeps the text on a single line */
+}
+
+.nav-item:hover .hover-services {
+  visibility: visible;
+}
+
+.hover-location{
+  position: absolute;
+  top: 80%; /* Adjusts vertical alignment to the middle of the parent */
+  left: 100%; /* Starts the text right after the image */
+  transform: translateY(-50%); /* Centers the text vertically relative to the image */
+  visibility: hidden;
+  color: white;
+  background-color: #79a58bf7;
+  padding: 5px;
+  border-radius: 10px;
+  white-space: nowrap; /* Keeps the text on a single line */
+}
+
+
+.hover-mission{
+  position: absolute;
+  top: 30%; /* Adjusts vertical alignment to the middle of the parent */
+  left: 100%; /* Starts the text right after the image */
+  transform: translateY(-50%); /* Centers the text vertically relative to the image */
+  visibility: hidden;
+  color: white;
+  background-color: #79a58bf7;
+  padding: 5px;
+  border-radius: 10px;
+  white-space: nowrap; /* Keeps the text on a single line */
+}
+
+.dropdown-item:hover .hover-mission {
+  visibility: visible;
+}
+.dropdown-item:hover .hover-location {
+  visibility: visible;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 3rem;
+}

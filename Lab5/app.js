@@ -199,36 +199,37 @@ function generateProgress() {
   function generateDates() {
     const modal_main = document.getElementById('modal_main');
     modal_main.innerHTML = ''
+    modal_main.innerHTML = ''; // Clear existing content
     modal_main.innerHTML = `
     <div id="modal_main_header">${appt_steps[currentStep].title}</div>
-    <form id="appt-form">
+    <form id="appt-form" onsubmit="event.preventDefault(); validateForm();">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="FullName">Full Name</label>
-          <input class="form-control" id="FullName" placeholder="Full Name" oninput="validateFullName()" onfocus="handleFocus(this)" onblur="handleBlur(this)" required>
+          <input class="form-control" id="FullName" placeholder="Full Name" oninput="validateFullName()" required>
           <div id="fullNameError" class="error-message"></div>
         </div>
         <div class="form-group col-md-6">
           <label for="Email">Email</label>
-          <input class="form-control" id="Email" placeholder="Email" oninput="validateEmail()" onfocus="handleFocus(this)" onblur="handleBlur(this)" required>
+          <input type="email" class="form-control" id="Email" placeholder="Email" oninput="validateEmail()" required>
           <div id="emailError" class="error-message"></div>
         </div>
       </div>
-
+      
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="CreditCard">Credit Card Number</label>
-          <input class="form-control" id="CreditCard" placeholder="Credit Card Number" oninput="validateCreditCard()" onfocus="handleFocus(this)" onblur="handleBlur(this)" required>
+          <input type="text" class="form-control" id="CreditCard" placeholder="Credit Card Number" oninput="validateCreditCard()" required>
           <div id="creditCardError" class="error-message"></div>
         </div>
         <div class="form-group col-md-3">
           <label for="ExpirationDate">Expiration Date</label>
-          <input class="form-control" id="ExpirationDate" placeholder="MM/YY" oninput="validateExpirationDate()" onfocus="handleFocus(this)" onblur="handleBlur(this)" required>
+          <input type="text" class="form-control" id="ExpirationDate" placeholder="MM/YY" oninput="validateExpirationDate()" required>
           <div id="expirationDateError" class="error-message"></div>
         </div>
         <div class="form-group col-md-3">
           <label for="CVV">CVV</label>
-          <input class="form-control" id="CVV" placeholder="CVV" oninput="validateCVV()" onfocus="handleFocus(this)" onblur="handleBlur(this)" required>
+          <input type="text" class="form-control" id="CVV" placeholder="CVV" oninput="validateCVV()" required>
           <div id="cvvError" class="error-message"></div>
         </div>
       </div>
@@ -240,43 +241,57 @@ function generateProgress() {
         </div>
       </div>
 
+      <button type="button" id="modal-back-button" class="btn btn-primary">Back</button>
       <button id="btn-appt" class="btn btn-primary" onclick="advance()">Next</button>
     </form>
-    <button type="button" id="modal-back-button" class="btn btn-primary">Back</button>
-    `
-  const modal_forward_button = document.getElementById("btn-appt");
-  modal_forward_button.onclick = function() {
-    const errorMessages = document.querySelectorAll('.error-message');
-    const hasErrors = Array.from(errorMessages).some(errorMessage => errorMessage.textContent !== '');
-    const inputs = document.querySelectorAll('input[required]');
-    const isEmpty = Array.from(inputs).some(input => input.value.trim() === '');
-    if (!hasErrors && !isEmpty) {
-      advance();
+    `;
+    
+    
+    //validation function called on form submission
+    function validateForm() {
+      validateFullName();
+      validateEmail();
+      validateCreditCard();
+      validateExpirationDate();
+      validateCVV();
     }
-  }
 
-    const modal_back_button = document.getElementById("modal-back-button")
+    const modal_back_button = document.getElementById("modal-back-button");
     modal_back_button.onclick = function () {
-      cart.pop();
-      goBack();
+        cart.pop();
+        goBack();
     };
-  const calendar = document.getElementById('calendar');
 
-   // Initialize Pikaday
-  var picker = new Pikaday({
-  showMonthAfterYear: false,
-  disableDayFn: function (date) {
-    return cart[2].disabledDates.includes(date.getDay())
-  },
-  onSelect: function(selectedDate) {
-      var formattedDate = moment(selectedDate).format('YYYY-MM-DD');
-      document.getElementById('selected-date').textContent = 'Selected Date: ' + formattedDate;
-  }
-});
+    // Form submission and validation logic
+    const modal_forward_button = document.getElementById("btn-appt");
+    document.getElementById('appt-form').onsubmit = function(event) {
+        const errorMessages = document.querySelectorAll('.error-message');
+        const hasErrors = Array.from(errorMessages).some(errorMessage => errorMessage.textContent !== '');
+        const inputs = document.querySelectorAll('input[required]');
+        const isEmpty = Array.from(inputs).some(input => input.value.trim() === '');
+        if (!hasErrors && !isEmpty) {
+            advance();
+        }
+    };
 
-  calendar.appendChild(picker.el);
-  picker.show();
-}
+    // Calendar initialization
+    const calendarContainer = document.getElementById('calendar'); 
+
+    // Initialize Pikaday
+    var picker = new Pikaday({
+      showMonthAfterYear: false,
+      disableDayFn: function (date) {
+        return cart[2].disabledDates.includes(date.getDay())
+      },
+      onSelect: function(selectedDate) {
+          var formattedDate = moment(selectedDate).format('YYYY-MM-DD');
+          document.getElementById('selected-date').textContent = 'Selected Date: ' + formattedDate;
+      }
+    });
+    
+      calendar.appendChild(picker.el);
+      picker.show();
+    }
 
 function handleFocus(element) {
     element.classList.add('focused');
@@ -419,3 +434,15 @@ function goBack() {
   generateServices(appt_steps)
 
 // END OF APPOINTMENT MODAL----------------------------------------
+
+// REDIRECT MODAL FROM CAROUSEL
+function activateApptCarouselModal() {
+  currentStep = 2 - 1; // Subtract 1 because advance() will add 1 to currentStep
+  cart_total = 0;
+  cart = [];
+
+  // Display the modal
+  $('#myModal').modal('show');
+
+  advance(); // This will increment the currentStep and display the "Select Hairstylist" step
+}
