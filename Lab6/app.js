@@ -22,7 +22,9 @@ app.post('/submit', (req, res) => {
   saveFormDataToJson(formData);
 
   // Process the form data...
-  res.send('Form submitted successfully!');
+  console.log('Form submitted successfully!');
+  // Show results page
+  res.redirect('/results');
 });
 
 
@@ -30,21 +32,8 @@ app.post('/submit', (req, res) => {
 function saveFormDataToJson(formData) {
   const dataFilePath = path.join(__dirname, 'data', 'formData.json');
 
-  // Read existing data (if any)
-  let existingData = [];
   try {
-    const rawData = fs.readFileSync(dataFilePath);
-    existingData = JSON.parse(rawData);
-  } catch (error) {
-    console.error('Error reading existing data:', error);
-  }
-
-  // Add new form data to the existing data
-  existingData.push(formData);
-
-  // Write the updated data back to the JSON file
-  try {
-    const jsonData = JSON.stringify(existingData, null, 2);
+    const jsonData = JSON.stringify([formData], null, 2);
     fs.writeFileSync(dataFilePath, jsonData);
     console.log('Form data saved to formData.json');
   } catch (error) {
@@ -52,11 +41,36 @@ function saveFormDataToJson(formData) {
   }
 }
 
+// Redirect to survey page
+app.get('/results', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'results.html'));
+});
+
+// Serve survey results from the JSON file
+app.get('/getResults', (req, res) => {
+  const dataFilePath = path.join(__dirname, 'data', 'formData.json');
+
+  // Read existing data
+  try {
+    const rawData = fs.readFileSync(dataFilePath);
+    const formData = JSON.parse(rawData);
+
+    // Send the form data as JSON
+    res.json(formData);
+  } catch (error) {
+    console.error('Error reading existing data:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
 
-// Serve index.html for the root path
+// Redirects the default path to the survey
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.get('/results.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'results.js'));
 });
 
 app.listen(port, () => {
