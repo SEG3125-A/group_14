@@ -1,0 +1,282 @@
+    .actions {
+        display: flex;
+        justify-content: center; /* Aligns children (the button) horizontally in the center */
+        align-items: center; /* Aligns children (the button) vertically in the center */
+        height: 100%; /* Ensure the container has a height to align items within */
+    }
+
+  .header-text {
+        text-decoration: none;
+        color: #18272F;
+        font-weight: 700;
+        position: relative;
+    }
+
+    .header-text::before {
+        content: '';
+        background: rgba(204, 255, 0, 0.5); 
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        width: 100%;
+        height: 5px;
+        z-index: -1;
+        transition: all .3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .header-text:hover::before {
+        bottom: 0;
+        height: 100%;
+    }
+  
+
+    .gg-instagram {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        border: 2px solid transparent;
+        box-shadow: 0 0 0 2px;
+        border-radius: 4px;
+        width: 20px;
+        height: 20px
+    }
+
+    .background {
+        background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), 
+                    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), 
+                    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), 
+                    radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), 
+                    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), 
+                    radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), 
+                    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
+                    linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+        min-height: 100vh;
+    }
+
+   .gg-instagram::after,
+   .gg-instagram::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute
+   }
+   
+   .gg-instagram::after {
+        border: 2px solid;
+        left: 3px;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+    top: 3px
+   }
+   
+   .gg-instagram::before {
+        border-radius: 3px;
+        width: 2px;
+        height: 2px;
+        background: currentColor;
+        right: 1px;
+        top: 1px
+   } 
+
+    .logo-container {
+        position: absolute;
+        top: 10px; /* Adjust as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000; /* Ensures it stays on top */
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .header-section {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        margin-top: 50px;
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+
+    .header-section h1 {
+        position: relative;
+        font-size: 2.5rem; 
+        color: #111; 
+        padding: 0.5em 0; 
+        margin: 0; 
+        display: inline-block; 
+        overflow: hidden; 
+        border-radius: 10px; 
+      }
+      
+      .header-section h1::before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(204, 255, 0, 0.5); /* Translucent highlight color using RGBA */
+        transition: transform .3s ease;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        border-radius: 10px;
+      }
+      
+      .header-section h1:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+      
+ 
+    .header-text, question-container {
+        font-family: 'Proxima Nova', sans-serif;
+        font-size: 15px;
+        color: lightgrey;
+    }
+    .question-container {
+        font-family: 'Proxima Nova', sans-serif;
+    }
+
+   .drag-question-container {
+        font-family: 'Proxima Nova', sans-serif;
+
+   }
+    .question-container h3 {
+        margin-bottom: 10px;
+    }
+    
+    .form-label {
+        display: inline-block;
+        width: 50%;
+        font-size: 16px;
+    }
+    
+    .float-end {
+        float: right;
+    }
+    
+    .form-range {
+        width: calc(50% - 0px); 
+        margin: 0 10px;
+    }
+
+    input[type="text"] {
+        width: 200px;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-family: 'Proxima Nova', sans-serif;
+        font-size: 16px;
+      }
+      
+      input[type="text"]:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+
+      textarea {
+        width: 500px;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-family: 'Proxima Nova', sans-serif;
+        font-size: 16px;
+        resize: vertical; /* Allows vertical resizing, you might want to set it to 'none' if resizing is not desired */
+      }
+      
+      textarea:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+      
+      
+    .popup {
+        font-family: 'Proxima Nova', sans-serif;
+        visibility: hidden;
+        background-color: lightgrey;
+        text-align: center;
+        padding: 5px;
+        border-radius: 6px;
+        left: 500px;
+        transform: translate(1400%, 0%);
+        width: 40px;
+        height: 20px;
+    }
+    
+    .range {
+        position: relative;
+    }
+
+    .signature {
+        font-family: 'Proxima Nova', sans-serif;
+        color: lightgrey;
+        font-style: italic;
+        font-weight: 100;
+        font-size: 12px;
+ 
+    }
+      
+    button {
+        font-family: 'Proxima Nova', sans-serif;
+        align-items: center;
+        background-color: lightgrey;
+        border: 2px solid #111;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #111;
+        cursor: pointer;
+        display: flex;
+        font-family: Inter,sans-serif;
+        font-size: 16px;
+        height: 48px;
+        justify-content: center;
+        line-height: 24px;
+        max-width: 100%;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    button:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 48px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+    }
+
+    button:hover:after {
+        transform: translate(0, 0);
+    }
+    
+    button:active {
+        background-color: #cbcbcb;
+        outline: 0;
+    }
+
+    button:hover {
+        outline: 0;
+    }
+
+   
+  

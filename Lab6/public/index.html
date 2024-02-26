@@ -7,7 +7,10 @@
       </style>
     <title>Lab1 Survey</title>
 
-    <link rel="stylesheet" href="../css/styles.css" />
+    
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
   </head>
   <body class="background">
     <div class="center">
@@ -36,34 +39,29 @@
           <div class="question-container">
             <br>
             <h3>What is your name?</h3>
-            <label for="username">Name:</label>
+            <label for="username"></label>
             <input type="text" id="q1" name="username" required />
           </div>
 
-          <div class="question-container">
-            <h3>
-              On a scale of 1-10, how much do you enjoy using the Instagram App?
-            </h3>
-            <label for="q2">Select your enjoyment level:</label>
-            <input
-              type="number"
-              id="q2"
-              name="enjoyment-scale"
-              min="1"
-              max="10"
-              required
-            />
+          <div class="drag-question-container">
+            <h3>How much do you enjoy using the Instagram App? (on a scale from 1-10)</h3>
+            <label for="enjoyment-scale" class="form-label">Bad</label>
+            <label for="enjoyment-scale" class="form-label float-end">Excellent</label>
+            <div class="range">
+              <input type="range" class="form-range" min="0" max="10" step="1" id="enjoyment-scale" name="enjoyment-scale" oninput="updatePopupValue(this.value)"  />
+              <div class="popup" id="popup">0</div>
+            </div>
           </div>
+          
 
           <div class="question-container">
             <h3>Which is your favourite instagram service:</h3>
             <label for="instagram-services">Choose a service:</label>
             <select id="instagram-services" name="instagram-services">
               <option id="q3-option1" value="reels">Reels</option>
-              <option id="q3-option2" value="posting">Posting</option>
-              <option id="q3-option3" value="story-viewing">
-                Story Viewing
-              </option>
+              <option id="q3-option2" value="dms">Direct Messages</option>
+              <option id="q3-option3" value="story-viewing">Story Viewing </option>
+              <option id="q3-option4" value="posts">Posts</option>
             </select>
           </div>
 
@@ -75,7 +73,6 @@
                 type="radio"
                 name="usage"
                 value="never"
-                required
               />
               Never
             </label>
@@ -143,16 +140,73 @@
           </div>
 
           <div class="actions">
-            <button  id="submit-button" type="submit" value="Submit">Submit</button>
+            <br> 
+            <button  id="button" type="submit" value="Submit">Submit</button>
           </div>
         </form>
       </div>
     </main>
+
     <footer>
       <span class="signature">
         <br />
-        Designed By Feyi Adesanya, Tina Trinh, Serena Iyoha
+        Designed By Feyi Adesanya, Tina Trinh, Serena Iyoha, Tara Denaud
       </span>
     </footer>
+
+      <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  
+  <script>
+    function updatePopupValue(value) {
+      const slider = document.getElementById('enjoyment-scale');
+      const popup = document.getElementById('popup');
+      const max = slider.max;
+      const min = slider.min;
+    
+      // Update popup text
+      popup.textContent = value;
+    
+      // Calculate percentage
+      const percentage = ((value - min) / (max - min)) * 100;
+    
+      // Adjust popup position
+      popup.style.left = `calc(${percentage}% + (${slider.offsetLeft}px) - (${popup.offsetWidth / 2}px))`;
+    
+      // Make the popup visible
+      popup.style.visibility = 'visible';
+    }
+    
+    // Hide popup when not focusing or hovering
+    slider.addEventListener('mouseleave', () => {
+      popup.style.visibility = 'hidden';
+    });
+    slider.addEventListener('blur', () => {
+      popup.style.visibility = 'hidden';
+    });
+
+
+    function updatePopupPosition(slider) {
+      const popup = document.getElementById('popup');
+      const sliderValue = parseInt(slider.value);
+      const min = parseInt(slider.min) || 0;
+      const max = parseInt(slider.max) || 100;
+
+      // Calculate the percentage of the slider value within the total range
+      const percentage = ((sliderValue - min) / (max - min)) * 100;
+
+      // Adjust the position of the popup. The 'left' style property is a percentage of the slider's width
+      // The additional calculation aims to adjust the popup position more accurately under the slider thumb
+      popup.style.left = `calc(${percentage}% + (${(popup.offsetWidth / 2) * (percentage / 100) * -1}px))`;
+
+      // Update the popup content and make it visible
+      popup.textContent = sliderValue;
+      popup.style.visibility = 'visible';
+    }
+
+    </script>
   </body>
 </html>
