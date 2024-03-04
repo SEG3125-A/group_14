@@ -14,7 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
       // Iterate through results and display them
       results.forEach(result => {
         const resultElement = document.createElement('div');
-        resultElement.innerHTML = `<strong>${result.username}</strong>: ${result['enjoyment-scale']} - ${result['instagram-services']} - ${result.usage.join(', ')} - ${result.final}`;
+        // resultElement.innerHTML = `<strong>${result.username}</strong>: ${result['enjoyment-scale']} - ${result['instagram-services']} - ${result.usage.join(', ')} - ${result.final}`;
+        resultElement.innerHTML = `
+    <ul class="list-group">
+      <li class="list-group-item" id="user"><strong> Name: ${result.username}</strong></li>
+      <li class="list-group-item" id="enjoyment">Enjoyment: ${result['enjoyment-scale']}</li>
+      <li class="list-group-item" id="service">Service: ${result['instagram-services']}</li>
+      <li class="list-group-item" id="usage">Usage: ${result.usage.join(', ')}</li>
+      <li class="list-group-item" id="comment">Comments: ${result.final}</li>
+    </ul>`;
+        
         resultsContainer.appendChild(resultElement);
       });
     }
