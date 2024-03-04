@@ -280,3 +280,7 @@
 
    
   
+.list-group-item
+.panel-body{
+    background-color: rgba(255, 255, 255, 0.5); /* Use RGBA color with an alpha value for translucent background color */
+  }
