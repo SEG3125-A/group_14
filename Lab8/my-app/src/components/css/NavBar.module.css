@@ -1,0 +1,35 @@
+/* NavBar.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+.navbar {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navLink {
+  color: #c9c7be;
+  font-weight: 300;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transition: color 0.3s, background-color 0.3s;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-family:'Courier New', Courier, monospace
+}
+
+.navLink:hover {
+  background-color: #fff;
+}
+
+.navbarNav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbarCollapse {
+  background-color: #212529;
+}
