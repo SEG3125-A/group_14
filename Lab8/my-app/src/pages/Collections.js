@@ -2,10 +2,11 @@
 import React from 'react';
 import ImageGrid from '../components/ImageGrid';
 import styles from './css/Collections.module.css';
-import Button from 'react-bootstrap/Button';
+import ImageSearchDropDown from '../components/ImageSearchDropdown';
 
 const Collections = () => (
     <div className={styles.collectionContainer}>
+        <ImageSearchDropDown/>
         <ImageGrid numberOfItems={5} items ={[
             <div className={styles.photo1}></div>,
             <div className={styles.photo2}></div>,

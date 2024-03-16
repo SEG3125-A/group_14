@@ -1,0 +1,27 @@
+.search1, .search1, .search1 {
+    width: 200px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+.searchBtn {
+    margin-bottom:10px;
+    background-color: #809681;
+}
+
+.searchContainer {
+    text-align: center;
+}
+
+.search1 {
+    background-image: url("../../assets/search_1.jpg"); 
+}
+
+.search2 {
+    background-image: url("../../assets/search_2.jpg"); 
+}
+
+.search3 {
+    background-image: url("../../assets/search_3.jpg"); 
+}
