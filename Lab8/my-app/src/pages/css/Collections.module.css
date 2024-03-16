@@ -1,6 +1,5 @@
 .collectionContainer{
     background-color: #9bb79d;
-    padding:10px;
 }
 
 .ImageGrid{
@@ -15,23 +14,23 @@
 }
  
 .photo1 {
-    background-image: url("../../assets/1.jpg");
+    background-image: url("../../assets/collections_1.jpg");
 } 
 
 .photo2 {
-    background-image: url("../../assets/2.jpg");
+    background-image: url("../../assets/collections_2.jpg");
 } 
 
 .photo3 {
-    background-image: url("../../assets/3.jpg");
+    background-image: url("../../assets/collections_3.jpg");
 } 
 
 .photo4 {
-    background-image: url("../../assets/4.jpg");
+    background-image: url("../../assets/collections_4.jpg");
 } 
 
 .photo5 {
-    background-image: url("../../assets/5.jpg");
+    background-image: url("../../assets/collections_5.jpg");
 } 
 
 
