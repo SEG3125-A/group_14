@@ -9,19 +9,19 @@ const ImageSearchDropDown = () => {
       <Dropdown.Menu>
         <Dropdown.Item href="#/action-1">
             <div className={styles.searchContainer}>
-                Monochrome Palatte
+                Monochrome Palette
                 <div className={styles.search1}></div>
             </div>
         </Dropdown.Item>
         <Dropdown.Item href="#/action-2">
             <div className={styles.searchContainer}>
-                Duotone Palatte
+                Duotone Palette
                 <div className={styles.search2}></div>
             </div>
         </Dropdown.Item>
         <Dropdown.Item href="#/action-3">
             <div className={styles.searchContainer}>
-                Pastele Palatte
+                Pastel Palette
                 <div className={styles.search3}></div>
             </div>
         </Dropdown.Item>
