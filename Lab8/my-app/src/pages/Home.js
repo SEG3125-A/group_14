@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 
 const Home = () => (
-    <Container className={styles.homeContainer}>
+    <div className={styles.homeContainer}>
         <div className={styles.mainWrapper}>
             <div className={styles.headerDate}>
                 <h1  className={styles.header}>The Art of Storytelling</h1>
@@ -23,15 +23,16 @@ const Home = () => (
                     Welcome to WanderLens, where every click captures a story and every image is a journey. We're passionate about bringing the world to you through our photography services that range from personalized photo sessions to selling unique, heartfealt artwork. Our commitment to excellence and love for storytelling shines through every frame, connecting us with like minded individuals who cheris the beauty if the moment. Join us to create long lasting memories.
                 </div>
                 <div className={styles.subtitle}>
-                    <h1>ABOUT US</h1>
+                    <h1>about us</h1>
                     <h3>CAPTIVATING</h3>
                     <h3>DYNAMIC</h3>
                     <h3>VIBRANT</h3>
                 </div>
+                <div className={styles.semiCircle}></div>
             </div>
 
         </div>
-    </Container>
+    </div>
 );
 
 export default Home;
