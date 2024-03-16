@@ -1,6 +1,5 @@
 // Home.js
 import React from 'react';
-import Container from 'react-bootstrap/Container';
 import styles from './css/Home.module.css';
 import Button from 'react-bootstrap/Button';
 
