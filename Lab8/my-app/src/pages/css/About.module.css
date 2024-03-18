@@ -1,0 +1,87 @@
+.aboutContainer{
+    background-color: #9bb79d;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.numberText {
+    margin-right: 10px;
+    color: #d8d64f;
+    font-size: 7vw;
+}
+
+
+.galleryTitle {
+    font-size: 1.7rem; /* Adjust the size as needed */
+    color: #333; /* Title color */
+    margin: 5px 0; /* Space above and below the title */
+}
+
+.galleryDescription {
+    margin-top: 5px;
+    color: #333;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 280px; /* Adjust based on your design */
+    cursor: pointer;
+}
+
+.text-container {
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f0f0f0; /* Background color of the container */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  .card {
+    background-color: rgba(255, 255, 255, 0.5); /* Set background color with opacity */
+    padding: 20px; /* Add padding for content spacing */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 20px; /* Add margin to prevent touching page borders */
+    box-shadow: 0 0 10px rgbxa(0, 0, 0, 0.1); /* Add a subtle shadow */
+
+  }
+
+  /* from https://www.bootdey.com/snippets/view/bs4-my-experience-timeline*/
+  .card img {
+    width: 300px; /* Set the width of the image */
+    height: auto; /* Let the browser calculate the height automatically based on the aspect ratio */
+  }
+
+  .card-text {
+    flex: 1; /* Let the text container grow to fill the remaining space */
+    padding: 20px; /* Add padding to the text container */
+  }
+
+ 
+  .DescriptionCard {
+    width:65%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #9bb79d;
+    padding:20px
+}
+
+.secondaryWrapper {
+    height:47%;
+    display: flex;
+    flex-direction: row;
+}
+
+.secondaryImg{
+    background-image: url(./../../assets/home_2nd.webp);
+    background-size: cover;
+    width:35%
+}
+
+
+.photo1 {
+    background-image: url("../../assets/collections_1.jpg");
+} 

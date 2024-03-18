@@ -1,5 +1,9 @@
 .collectionContainer{
     background-color: #9bb79d;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
 }
 
 .ImageGrid{

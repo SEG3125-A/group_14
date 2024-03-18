@@ -1,0 +1,52 @@
+.contactContainer{
+    background-color: #3d3f3d;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+
+.bigTitle {
+    margin-right: 10px;
+    color: #bcba48;
+    font-size: 7vw;
+    text-align: center;
+
+}
+
+
+.galleryDescription {
+    margin-top: 5px;
+    color: #d2d2d2;
+    font-size: 1rem;
+    padding-left: 30px;
+}
+
+.container {
+    display: flex;
+    margin: 30px; /* Adjust margin as needed */
+    
+  }
+  
+  .imageContainer {
+    flex: 1; /* Occupy 50% of the container */
+    width: 100%; /* Set the width of the image to 100% of its container */
+    height: auto; /* Let the browser calculate the height automatically to maintain aspect ratio */
+  }
+  
+  .formContainer {
+    flex: 1; /* Occupy 50% of the container */
+  }
+
+  .submitBtn{
+    background-color: #e2dfdf;
+    border-radius: 5px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    font-weight:400;
+}
+  
