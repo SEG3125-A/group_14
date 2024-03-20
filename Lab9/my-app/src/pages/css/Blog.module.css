@@ -1,0 +1,153 @@
+.blogContainer {
+    width: 100%;
+    height: 100vh;
+    background-color: #9bb79d; 
+    position: relative;
+}
+
+.titleWrapper {
+    width:100%;
+    height:10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.title h1 {
+    color:#000;
+    font-weight: 400;
+    font-size:5.75vw;
+    align-items: end;
+}
+  
+.numberText {
+    margin-right: 10px;
+    color: #d8d64f;
+    font-size: 7vw;
+}
+
+.mainWrapper
+
+
+.firstImg{
+    background-image: url(./../../assets/blog_1.webp);
+    background-size: cover;
+    width:35%
+}
+
+.secondImg{
+    background-image: url(./../../assets/blog_2.jpg);
+    background-size: cover;
+    width:35%
+}
+
+.thirdImg{
+    background-image: url(./../../assets/blog_3.jpeg);
+    background-size: cover;
+    width:35%
+}
+
+.fourthImg{
+    background-image: url(./../../assets/blog_4.jpg);
+    background-size: cover;
+    width:35%
+}
+
+.fifthImg{
+    background-image: url(./../../assets/blog_5.jpg);
+    background-size: cover;
+    width:35%
+}
+
+.description {
+    font-weight: 500;
+    color:#000;
+    font-size:1.25vw;
+    width:55%;
+}
+
+.subtitle {
+    padding-left: 25px;
+    text-align:end
+}
+
+.subtitle h3 {
+    color:#000;
+    font-weight: 400;
+    font-size:2.75vw;
+    align-items: end;
+}
+
+.semiCircle {
+    position: absolute;
+    bottom: -0;
+    right: -10; 
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    z-index: 0;
+    background-color: #809681;
+  }
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    align-items: flex-start; /* Align items at the top */
+    padding: 20px;
+    z-index: 1; /* Ensure the gallery is above the semi-circle */
+}
+
+.galleryItem {
+    flex: 0 0 auto; /* Do not grow, do not shrink, and be based on its width */
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    width: 300px; /* Adjust based on your preference */
+    background-color: #9bb79d;
+    transition: background-color 0.3s;
+}
+
+.galleryItem:hover {
+    background-color: #c2d8c3; /* Lighter background color on hover */
+}
+
+.galleryImage {
+    width: 100%; /* Image will take up the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+}
+
+.galleryDescription {
+    margin-top: 5px;
+    color: #333;
+    font-size: 1rem;
+}
+
+.galleryTitle {
+    font-size: 1.7rem; /* Adjust the size as needed */
+    color: #333; /* Title color */
+    margin: 5px 0; /* Space above and below the title */
+}
+
+.galleryDescription {
+    margin-top: 5px;
+    color: #333;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 280px; /* Adjust based on your design */
+    cursor: pointer;
+}
+
+.galleryDescription:hover {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    cursor: pointer;
+}
+

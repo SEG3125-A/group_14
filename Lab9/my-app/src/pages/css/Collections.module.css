@@ -1,0 +1,43 @@
+.collectionContainer{
+    background-color: #9bb79d;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+}
+
+.ImageGrid{
+    width:100%;
+}
+
+.photo1, .photo2, .photo3, .photo4, .photo5 {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+ 
+.photo1 {
+    background-image: url("../../assets/collections_1.jpg");
+} 
+
+.photo2 {
+    background-image: url("../../assets/collections_2.jpg");
+} 
+
+.photo3 {
+    background-image: url("../../assets/collections_3.jpg");
+} 
+
+.photo4 {
+    background-image: url("../../assets/collections_4.jpg");
+} 
+
+.photo5 {
+    background-image: url("../../assets/collections_5.jpg");
+} 
+
+
+.header {
+    color:#fff;
+}
