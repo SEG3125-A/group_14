@@ -19,3 +19,4 @@ Anisha: https://github.com/AnishaDeochake <br>
 - [Lab 4](https://seg3125-a.github.io/group_14/Lab4/)
 - [Lab 5](https://seg3125-a.github.io/group_14/Lab5/)
 - [Lab 6](https://seg3125-a.github.io/group_14/Lab6/)
+- [Lab 8](https://seg3125-a.github.io/group_14/Lab8/)
