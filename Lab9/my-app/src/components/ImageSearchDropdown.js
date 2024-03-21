@@ -2,7 +2,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import styles from './css/ImageSearchDropdown.module.css';
 import { useTranslation } from 'react-i18next';
 
-const ImageSearchDropDown = () => {
+const ImageSearchDropDown = ({ onSelectCategory }) => {
   const { t } = useTranslation();
 
   return (
@@ -11,21 +11,21 @@ const ImageSearchDropDown = () => {
         {t('components.imageSearchDropdown.findNextIdea')}
       </Dropdown.Toggle>
       <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">
+        <Dropdown.Item onClick={() => onSelectCategory("Brand New")}>
           <div className={styles.searchContainer}>
-            {t('components.imageSearchDropdown.monochromePalette')}
+            {t('components.imageSearchDropdown.brandNew')}
             <div className={styles.search1}></div>
           </div>
         </Dropdown.Item>
-        <Dropdown.Item href="#/action-2">
+        <Dropdown.Item  onClick={() => onSelectCategory("Highlights")}>
           <div className={styles.searchContainer}>
-            {t('components.imageSearchDropdown.duotonePalette')}
+            {t('components.imageSearchDropdown.highlights')}
             <div className={styles.search2}></div>
           </div>
         </Dropdown.Item>
-        <Dropdown.Item href="#/action-3">
+        <Dropdown.Item  onClick={() => onSelectCategory("Past Winners")}>
           <div className={styles.searchContainer}>
-            {t('components.imageSearchDropdown.pastelPalette')}
+            {t('components.imageSearchDropdown.pastWinners')}
             <div className={styles.search3}></div>
           </div>
         </Dropdown.Item>

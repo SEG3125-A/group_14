@@ -11,9 +11,9 @@
     },
     "imageSearchDropdown": {
       "findNextIdea": "Trouvez votre prochaine idée",
-      "monochromePalette": "Palette Monochrome",
-      "duotonePalette": "Palette Bicolore",
-      "pastelPalette": "Palette de Pastels"
+      "brandNew": "Tout Neuf",
+      "highlights": "Points Forts",
+      "pastWinners": "Anciens Gagnants"
     }
   },
   "pages": {

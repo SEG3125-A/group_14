@@ -11,9 +11,9 @@
     },
     "imageSearchDropdown": {
       "findNextIdea": "Find Your Next Idea",
-      "monochromePalette": "Monochrome Palette",
-      "duotonePalette": "Duotone Palette",
-      "pastelPalette": "Pastel Palette"
+      "brandNew": "Brand New",
+      "highlights": "Highlights",
+      "pastWinners": "Past Winners"
     }
   },
   "pages": {
