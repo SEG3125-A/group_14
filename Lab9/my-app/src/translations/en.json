@@ -1,16 +1,82 @@
 {
+  "components": {
+    "navbar": {
+      "home": "Home",
+      "collections": "Collections",
+      "about": "About",
+      "events": "Events",
+      "blog": "Blog",
+      "contact": "Contact",
+      "toggleLanguage": "EN"
+    },
+    "imageSearchDropdown": {
+      "findNextIdea": "Find Your Next Idea",
+      "monochromePalette": "Monochrome Palette",
+      "duotonePalette": "Duotone Palette",
+      "pastelPalette": "Pastel Palette"
+    }
+  },
+  "pages": {
     "home": {
       "title": "The Art of Storytelling",
       "date": "March 15, 2024 - October 12, 2024",
       "learnMore": "Learn More",
-      "description": "Welcome to WanderLens, where every click captures a story and every image is a journey. We're passionate about bringing the world to you through our photography services that range from personalized photo sessions to selling unique, heartfelt artwork. Our commitment to excellence and love for storytelling shines through every frame, connecting us with like minded individuals who cherish the beauty if the moment. Join us to create long lasting memories.",
+      "description": "Welcome to WanderLens, where every click captures a story and every image is a journey. We're passionate about bringing the world to you through our photography services that range from personalized photo sessions to selling unique, heartfelt artwork. Our commitment to excellence and love for storytelling shines through every frame, connecting us with like-minded individuals who cherish the beauty of the moment. Join us to create long-lasting memories.",
       "about": "About Us",
       "captivating": "Captivating",
       "dynamic": "Dynamic",
       "vibrant": "Vibrant"
     },
-    "navbar": {
-      "toggleLanguage": "EN"
+    "collections": {
+      "header": "BE INSPIRED"
+    },
+    "about": {
+      "ourStory": "Our Story",
+      "trio": "In a realm where creativity thrived, a trio of dedicated women photographers, Sarah, Maya, and Lily, shared a common passion for capturing life's essence through their lenses. They yearned for a space where they could freely share their work, support each other, and build lasting connections.",
+      "vision": "After months of brainstorming, late-night coding sessions, and heartfelt discussions, their vision came to life: WanderLens. This comprehensive web platform was more than just a gallery for showcasing photos; it was a vibrant community where photographers could come together to find inspiration, seek guidance, and celebrate their shared love for the craft.",
+      "humbleBeginnings": "From its humble beginnings, WanderLens quickly gained traction, attracting photographers from around the globe who were drawn to its promise of creativity, education, and professional collaboration. As the community grew, so too did the platform's offerings, evolving to meet the needs of its diverse and passionate members. With each click of the shutter and every post shared, Wander Lens became not just a website, but a home for photographers—a place where they could find camaraderie, support, and endless opportunities to explore and expand their skills."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "formDescription": "Complete the form and we'll get back to you soon.",
+      "emailLabel": "Email address",
+      "exampleSelectLabel": "Example select",
+      "exampleMultipleSelectLabel": "Example multiple select",
+      "exampleTextareaLabel": "Example textarea",
+      "submitButton": "Submit"
+    },
+    "events": {
+      "title": "Our Photographic Services",
+      "backHome": "back home",
+      "back": "back",
+      "services": {
+        "wedding": {
+          "link": "wedding",
+          "description": "Nuptial Narratives, Wedding Whispers."
+        },
+        "gala": {
+          "link": "gala",
+          "description": "Gala Glamour, Philanthropic Phases."
+        },
+        "portrait": {
+          "link": "portrait",
+          "description": "Evocative, Expressive."
+        }
+      },
+      "contactInfo": {
+        "phone": "phone: (123) 456-7890",
+        "fax": "fax: 12345",
+        "email": "email: photos@gmail.com"
+      },
+      "bookServices": "BOOK SERVICES"
+    },
+    "blog": {
+      "title": "Our Photo Memoir In",
+      "Concert": "Metadata Extracted: Sony A7III, 35mm, f/1.8, 1/250 sec, ISO 3200, taken at a local music club in Austin, Texas, on June 9th, 2023. Automatic Tagging: \"indie band,\" \"live concert,\" \"intimate venue,\" \"musical.\" Descriptive Caption: \"this photograph captures the raw energy and connection of a live indie band performance. their passion with a captivated audience mere feet away. The intimacy of the venue adds to the immediacy of the moment, creating a shared experience that is the hallmark of the music scene. This shot, with its vivid colors and dynamic composition, showcases the vibrant spirit of live music and the communal joy it brings.\"",
+      "New Years Eve": "Metadata Extracted: Nikon D750, 50mm, f/1.4, 1/125 sec, ISO 800, taken on December 31st, 2022. Automatic Tagging: \"New Years Eve Party,\" \"indoor celebration,\" \"festivities,\" \"joy.\" Descriptive Caption: \"Inside the vibrant warmth of a New Years Eve celebration, where laughter and joy light up the room as brightly as the glittering decorations. This photograph captures an intimate moment of jubilation among friends, as they count down to midnight. The candid expressions, festive attire, and clinking glasses encapsulate the essence of welcoming the New Year with hope and camaraderie.\"",
+      "Sol duc falls": "Metadata Extracted: Canon EOS 5DS R, 70mm, f/11, 1/4 sec, ISO 100, taken in Olympic National Park, Washington, on May 15th, 2022. Automatic Tagging: \"Sol Duc Falls,\" \"Olympic National Park,\" \"Washington,\" \"waterfall,\" \"natural beauty.\" Descriptive Caption: \"Nestled in the heart of Olympic National Park, the Sol Duc Falls cascade with a grace and majesty. This photograph invites a moment of tranquility amidst the powerful rush of water, framed by lush, verdant forestry. The play of light and shadow, combined with the steady flow of the falls, conveys a sense of timeless beauty and the enduring spirit of nature in Washington's wilderness.\"",
+      "Paris findings": "Metadata Extracted: Canon EOS 5D Mark IV, 50mm, f/8, 1/250 sec, ISO 200, taken on April 15th, 2023. Automatic Tagging: \"paris look,\" \"architecture,\" \"Gothic style.\" Descriptive Caption: \"The mesmerizing details of paris’ Gothic architecture, captured in the soft light of a spring morning, highlight the timeless beauty and historical significance of this Parisian look.\"",
+      "Swan Lake": "Metadata Extracted: Canon EOS 5D Mark IV, 50mm, f/8, 1/250 sec, ISO 200, taken on April 15th, 2023. Automatic Tagging: \"Swan Lake,\" \"ballet performance,\" \"elegance,\" \"graceful movement.\" Descriptive Caption: \"A captivating moment from Swan Lake, immortalized under the luminous glow of stage lights, showcasing the epitome of balletic grace and elegance.\""
     }
   }
-  
+}

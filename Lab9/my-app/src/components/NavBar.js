@@ -21,15 +21,15 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav" className={styles.navbarCollapse}>
         <Nav className={`me-auto ${styles.navbarNav}`}>
-            <Nav.Link as={NavLink} to="/home" className={styles.navLink}>Home</Nav.Link>
-            <Nav.Link as={NavLink} to="/collections" className={styles.navLink}>Collections</Nav.Link>
-            <Nav.Link as={NavLink} to="/about" className={styles.navLink}>About</Nav.Link>
+            <Nav.Link as={NavLink} to="/home" className={styles.navLink}>{t('components.navbar.home')}</Nav.Link>
+            <Nav.Link as={NavLink} to="/collections" className={styles.navLink}>{t('components.navbar.collections')}</Nav.Link>
+            <Nav.Link as={NavLink} to="/about" className={styles.navLink}>{t('components.navbar.about')}</Nav.Link>
             <Navbar.Brand as={NavLink} to="/home" className={styles.navLink}>WanderLens</Navbar.Brand>
-            <Nav.Link as={NavLink} to="/events" className={styles.navLink}>Events</Nav.Link>
-            <Nav.Link as={NavLink} to="/blog" className={styles.navLink}>Blog</Nav.Link>
-            <Nav.Link as={NavLink} to="/contact" className={styles.navLink}>Contact</Nav.Link>
+            <Nav.Link as={NavLink} to="/events" className={styles.navLink}>{t('components.navbar.events')}</Nav.Link>
+            <Nav.Link as={NavLink} to="/blog" className={styles.navLink}>{t('components.navbar.blog')}</Nav.Link>
+            <Nav.Link as={NavLink} to="/contact" className={styles.navLink}>{t('components.navbar.contact')}</Nav.Link>
             <div>
-        <button onClick={toggleLanguage}>{t('navbar.toggleLanguage')}</button>
+        <button onClick={toggleLanguage}>{t('components.navbar.toggleLanguage')}</button>
       </div>
           </Nav>
         </Navbar.Collapse>

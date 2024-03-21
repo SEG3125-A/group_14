@@ -71,31 +71,32 @@
     font-weight: 500;
     color:#000;
     font-size:1.25vw;
-    width:55%;
+    width:75%;
 }
 
 .subtitle {
-    padding-left: 25px;
-    text-align:end
+    /* padding-left: 25px; */
+    text-align:end;
+    align-items: end;
 }
 
 .description,
 .subtitle {
     position: relative;
     z-index: 2;
+    margin-top:1.5vw;
 }
 
 .subtitle h1 {
     color:#fff;
     font-weight: bolder;
-    font-size:4.5vw;
+    font-size:3.75vw;
 }
 
 .subtitle h3 {
     color:#000;
     font-weight: 400;
     font-size:2.75vw;
-    align-items: end;
 }
 
 .semiCircle {

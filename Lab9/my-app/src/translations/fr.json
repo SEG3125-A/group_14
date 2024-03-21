@@ -1,4 +1,22 @@
 {
+  "components": {
+    "navbar": {
+      "home": "Accueil",
+      "collections": "Collections",
+      "about": "À Propos",
+      "events": "Événements",
+      "blog": "Blog",
+      "contact": "Contact",
+      "toggleLanguage": "FR"
+    },
+    "imageSearchDropdown": {
+      "findNextIdea": "Trouvez votre prochaine idée",
+      "monochromePalette": "Palette Monochrome",
+      "duotonePalette": "Palette Bicolore",
+      "pastelPalette": "Palette de Pastels"
+    }
+  },
+  "pages": {
     "home": {
       "title": "L'art de raconter des histoires",
       "date": "15 mars 2024 - 12 octobre 2024",
@@ -7,10 +25,58 @@
       "about": "À propos de nous",
       "captivating": "Captivant",
       "dynamic": "Dynamique",
-      "vibrant": "Vibrant"
+      "vibrant": "Vibrante"
     },
-    "navbar": {
-      "toggleLanguage": "FR"
+    "collections": {
+      "header": "SOYEZ INSPIRÉ"
+    },
+    "about": {
+      "ourStory": "Notre histoire",
+      "trio": "Dans un monde où la créativité prospérait, un trio de femmes photographes dévouées, Sarah, Maya et Lily, partageaient une passion commune pour capturer l'essence de la vie à travers leurs objectifs. Elles aspiraient à un espace où elles pourraient librement partager leur travail, se soutenir mutuellement et établir des liens durables.",
+      "vision": "Après des mois de remue-méninges, de sessions de codage nocturnes et de discussions sincères, leur vision est devenue réalité : WanderLens. Cette plateforme web complète était bien plus qu'une simple galerie pour présenter des photos ; c'était une communauté dynamique où les photographes pouvaient se rassembler pour trouver de l'inspiration, demander conseil et célébrer leur amour commun pour l'artisanat.",
+      "humbleBeginnings": "De ses modestes débuts, WanderLens a rapidement gagné en traction, attirant des photographes du monde entier attirés par sa promesse de créativité, d'éducation et de collaboration professionnelle. À mesure que la communauté grandissait, les offres de la plateforme évoluaient également pour répondre aux besoins de ses membres diversifiés et passionnés. À chaque clic de l'obturateur et à chaque publication partagée, Wander Lens est devenu non seulement un site web, mais un foyer pour les photographes - un lieu où ils pouvaient trouver camaraderie, soutien et d'innombrables opportunités pour explorer et développer leurs compétences."
+    },
+    "contact": {
+      "title": "Nous Contacter",
+      "formDescription": "Complétez le formulaire et nous vous répondrons bientôt.",
+      "emailLabel": "Adresse email",
+      "exampleSelectLabel": "Sélection d'exemple",
+      "exampleMultipleSelectLabel": "Exemple de sélection multiple",
+      "exampleTextareaLabel": "Exemple de zone de texte",
+      "submitButton": "Soumettre"
+    },
+    "events": {
+      "title": "Nos Services Photographiques",
+      "backHome": "retour à l'accueil",
+      "back": "retour",
+      "services": {
+        "wedding": {
+          "link": "mariage",
+          "description": "Récits nuptiaux, Chuchotements de mariage."
+        },
+        "gala": {
+          "link": "gala",
+          "description": "Glamour du Gala, Phases philanthropiques."
+        },
+        "portrait": {
+          "link": "portrait",
+          "description": "Évocateur, Expressif."
+        }
+      },
+      "contactInfo": {
+        "phone": "téléphone: (123) 456-7890",
+        "fax": "fax: 12345",
+        "email": "email: photos@gmail.com"
+      },
+      "bookServices": "RÉSERVER DES SERVICES"
+    },
+    "blog": {
+      "title": "Notre mémoire photographique en",
+      "Concert": "Métadonnées extraites: Sony A7III, 35mm, f/1.8, 1/250 sec, ISO 3200, pris dans un club de musique local à Austin, Texas, le 9 juin 2023. Balises automatiques : \"groupe indie,\" \"concert live,\" \"lieu intime,\" \"musical.\" Légende descriptive: \"cette photographie capture l'énergie brute et la connexion d'une performance live d'un groupe indie. leur passion avec un public captivé à quelques pieds de distance. L'intimité du lieu ajoute à l'immédiateté du moment, créant une expérience partagée qui est la marque de fabrique de la scène musicale. Cette prise de vue, avec ses couleurs vives et sa composition dynamique, met en valeur l'esprit vibrant de la musique live et la joie commune qu'elle apporte.\"",
+      "New Years Eve": "Métadonnées extraites: Nikon D750, 50mm, f/1.4, 1/125 sec, ISO 800, pris le 31 décembre 2022. Balises automatiques : \"Fête du Nouvel An,\" \"célébration intérieure,\" \"festivités,\" \"joie.\" Légende descriptive: \"À l'intérieur de la chaleur vibrante d'une célébration du Nouvel An, où le rire et la joie illuminent la pièce aussi brillamment que les décorations scintillantes. Cette photographie capture un moment intime de jubilation entre amis, alors qu'ils comptent les secondes jusqu'à minuit. Les expressions franches, les tenues festives et les verres qui s'entrechoquent incarnent l'essence de l'accueil de la nouvelle année avec espoir et camaraderie.\"",
+      "Sol duc falls": "Métadonnées extraites: Canon EOS 5DS R, 70mm, f/11, 1/4 sec, ISO 100, pris dans le parc national Olympique, Washington, le 15 mai 2022. Balises automatiques : \"Sol Duc Falls,\" \"Parc national Olympique,\" \"Washington,\" \"cascade,\" \"beauté naturelle.\" Légende descriptive: \"Nichées au cœur du parc national Olympique, les chutes de Sol Duc cascades avec une grâce et une majesté. Cette photographie invite à un moment de tranquillité au milieu de la puissante ruée d'eau, encadrée par une forêt luxuriante et verdoyante. Le jeu de lumière et d'ombre, combiné au flux régulier des chutes, transmet un sentiment de beauté intemporelle et l'esprit durable de la nature dans les terres sauvages de Washington.\"",
+      "Paris findings": "Métadonnées extraites : Canon EOS 5D Mark IV, 50 mm, f/8, 1/250 s, ISO 200, prises le 15 avril 2023. Marquage automatique : \"look parisien\" \"architecture\" \"Gothique style.\" Légende descriptive : \"Les détails fascinants de l'architecture gothique de Paris, capturés dans la douce lumière d'un matin de printemps, mettent en valeur la beauté intemporelle et l'importance historique de ce look parisien.\"",
+      "Swan Lake": "Métadonnées extraites : Canon EOS 5D Mark IV, 50 mm, f/8, 1/250 s, ISO 200, prises le 15 avril 2023. Marquage automatique : \"Le Lac des Cygnes,\" \"performance de ballet,\" \" élégance,\" \"mouvement gracieux.\" Légende descriptive : \"Un moment captivant du Lac des Cygnes, immortalisé sous la lueur lumineuse des lumières de la scène, mettant en valeur la quintessence de la grâce et de l'élégance ballet.\""
     }
   }
-  
+}
