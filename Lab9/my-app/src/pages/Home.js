@@ -2,6 +2,7 @@
 import React from 'react';
 import styles from './css/Home.module.css';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => (
@@ -12,7 +13,9 @@ const Home = () => (
                 <div className={styles.date}>March 15, 2024 - October 12, 2024</div>
             </div>
             <div>
-                <Button variant="light" size="lg" className={styles.learnMoreBtn}>Learn More</Button>
+                <Link to="/about">
+                    <Button variant="light" size="lg" className={styles.learnMoreBtn}>Learn More</Button>
+                </Link>
             </div>
         </div>
         <div className={styles.secondaryWrapper}>
