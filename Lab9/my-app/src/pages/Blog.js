@@ -24,8 +24,8 @@ const Blog = () => {
           {imageData.map((item, index) => (
             <div key={index} className={styles.galleryItem}>
               <img src={item.src} alt={`Gallery item ${index + 1}`} className={styles.galleryImage} />
-              <h3 className={styles.galleryTitle}>{t(`pages.blog.${item.title}`)}</h3>
-              <p className={styles.galleryDescription}>{t(`pages.blog.${item.title}.description`)}</p>
+              <h3 className={styles.galleryTitle}>{item.title}</h3>
+              <p className={styles.galleryDescription}>{t(`pages.blog.${item.title}`)}</p>
             </div>
           ))}
         </div>
