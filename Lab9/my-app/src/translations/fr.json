@@ -1,0 +1,16 @@
+{
+    "home": {
+      "title": "L'art de raconter des histoires",
+      "date": "15 mars 2024 - 12 octobre 2024",
+      "learnMore": "En savoir plus",
+      "description": "Bienvenue chez WanderLens, où chaque clic capture une histoire et chaque image est un voyage. Nous sommes passionnés par l'idée de vous faire découvrir le monde grâce à nos services de photographie qui vont des séances photo personnalisées à la vente d'œuvres d'art uniques et sincères. Notre engagement envers l'excellence et notre amour pour la narration transparaissent à travers chaque image, nous mettant en relation avec des personnes partageant les mêmes idées et chérissant la beauté du moment. Rejoignez-nous pour créer des souvenirs durables.",
+      "about": "À propos de nous",
+      "captivating": "Captivant",
+      "dynamic": "Dynamique",
+      "vibrant": "Vibrant"
+    },
+    "navbar": {
+      "toggleLanguage": "FR"
+    }
+  }
+  

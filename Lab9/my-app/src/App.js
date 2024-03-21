@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   return (
     // FOR NAVBAR DO NOT DELETE--------------
-    <Router>
+    <>
       <NavBar />
         <Routes>
         <Route path="/" element={<Home />} />
@@ -16,7 +16,7 @@ const App = () => {
             <Route key={index} path={route.path} element={route.component} />
           ))}
         </Routes>
-    </Router>
+    </>
    
     // END OF NAVBAR -----------------
   );
