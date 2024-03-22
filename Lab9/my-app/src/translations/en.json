@@ -43,7 +43,17 @@
       "exampleSelectLabel": "Example select",
       "exampleMultipleSelectLabel": "Example multiple select",
       "exampleTextareaLabel": "Example textarea",
-      "submitButton": "Submit"
+      "Category" : "Category",
+      "FirstName": "First Name",
+      "LastName": "Last Name",
+      "submitButton": "Submit",
+      "Comment": "What can we help you with today",
+      "Bug": "Bug Report",
+      "Community": "Community Guidelines",
+      "Billing" : "Billing & Payments",
+      "How" : "How-To",
+      "Account" : "Delete my Account",
+      "Other" : "Other"
     },
     "events": {
       "title": "Our Photographic Services",

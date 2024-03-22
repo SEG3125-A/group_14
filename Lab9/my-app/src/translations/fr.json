@@ -43,7 +43,17 @@
       "exampleSelectLabel": "Sélection d'exemple",
       "exampleMultipleSelectLabel": "Exemple de sélection multiple",
       "exampleTextareaLabel": "Exemple de zone de texte",
-      "submitButton": "Soumettre"
+      "submitButton": "Soumettre",
+      "Category" : "Catégorie",
+      "FirstName": "Surnom",
+      "LastName": "Nom",
+      "Comment": "Comment pouvons-nous vous aider?",
+      "Bug": "Signaler un bug",
+      "Community": "Directives de la communauté",
+      "Billing" : "Facturation et paiements",
+      "How" : "Comment faire",
+      "Account" : "Supprimer mon compte",
+      "Other" : "Autre"
     },
     "events": {
       "title": "Nos Services Photographiques",
