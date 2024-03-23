@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './css/Events.module.css';
 import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 import weddingImage from '../assets/wedding.jpg';
 import galaImage from '../assets/gala.jpg';
 import portraitImage from '../assets/portrait.jpg';
 
 function Events() {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
+
   return (
     <div className={styles.container}>
       <div className={styles.topBar}>
         <button className={styles.backLink}>back home</button>
         <h1 className={styles.title}>Our Photographic Services</h1>
-        <button className={styles.backLink}>back</button>
       </div>
       <div className={styles.services}>
         <div className={styles.service}>
@@ -41,8 +46,23 @@ function Events() {
         <p>phone: (123) 456-7890</p>
         <p>fax: 12345</p>
         <p>email: photos@gmail.com</p>
-        <Button className={styles.bookButton}>BOOK SERVICES</Button>
+        <Button className={styles.bookButton} onClick={handleShowModal}>BOOK SERVICES</Button>
       </div>
+      
+      {/* Modal for booking sexsrvices */}
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Book Services</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {/* Add your booking form or content here */}
+          <p>Modal Content Goes Here</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCloseModal}>Close</Button>
+          {/* Add any additional buttons or actions here */}
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }

@@ -2,27 +2,44 @@
 .container {
   display: flex;
   flex-direction: column;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #9bb79d;
   color: #FFFFFF;
 }
 
 .topBar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 20px;
+  font-weight: bold;
 }
 
 .backLink {
   cursor: pointer;
-  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
+  height: 40px;
+  width: 100px;
+  color:#4e5250;
+}
+
+.backLink:hover {
+  color: #000000;
 }
 
 .title {
-  font-size: 36px;
+  font-size: 60px;
   font-style: oblique, bold;
   font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold, italic;
+  text-align: center; 
+  font-weight: 600;
+  color: #05240f;
+  text-shadow: 2px 2px 0px  #4e5250,
+               4px 4px 0px #8ea793,
+               6px 6px 0px #4e562c,
+               8px 8px 0px #76854f,
+               10px 10px 0px #20503d;
+  padding: 20px;
 }
 
 .serviceSelection {
@@ -32,17 +49,14 @@
 }
 
 .serviceLink {
-  margin: 0 15px;
-  cursor: pointer;
-}
-
-.services {
-  display: flex;
-  justify-content: space-around;
+  color: #ffffff;
+  text-shadow: 2px 2px 0px  #4e5250,
+              4px 4px 0px #8ea793;
 }
 
 .serviceDescription {
-  font-size: 18px;
+  font-size: 14px;
+  font-style: italic;
 }
 
 .contactInfo {
@@ -50,34 +64,20 @@
   margin-top: 20px;
 }
 
-.bookButton {
-  background-color: #6D676E;
-  color: #FFFFFF;
-  border: none;
-  padding: 10px 20px;
-  margin: 20px auto;
-  display: block;
-  width: 200px; /* Adjust as needed */
-  cursor: pointer;
-}
-
-.serviceLink {
-  display: block; /* make the links block-level so they stack above the image */
-  margin-bottom: 8px; /* spacing between the link and the image */
-  cursor: pointer;
-  text-align: center; /* center the text */
-}
 
 .servicesContainer {
   position: relative;
-  display: flex; /* Align the arrows with the services */
-  align-items: center; /* Center the arrows vertically */
+  display: flex; 
+  align-items: center;
+  color: #ffffff;
+  margin-top: 20px;
 }
 
 .services {
   display: flex;
   overflow: hidden; /* Hide the overflowed content */
   width: 100%; /* Make sure the services take up the rest of the space */
+  justify-content: center; /* Center the services horizontally */
 }
 
 .service {
@@ -91,6 +91,7 @@
   display: block; /* Remove the default inline nature of images */
 }
 
+
 /* Events.module.css */
 .imageWrapper {
   width: 400px; /* Fixed width */
@@ -102,14 +103,65 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
   margin: 20px; /* Adds space around the wrapper */
   background-position: center; /* Centers the background image */
-  background-size: cover; /* Ensures the image covers the wrapper area */
+  background-size: cover; 
+  position: relative;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.overlayText {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.imageWrapper:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
 
 .footer {
   background-color: #4A4A4A; /* Adjust to match your footer color */
-  color: #fff;
+  color: white;
+  text-shadow: 2px 2px 0px  #05240f;
   text-align: center;
-  padding: 20px;
+  margin-top: 40px;
+  padding-top: 20px;
   font-size: 0.8em;
+  font-weight: bold;
+  font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.bookServicesButton {
+  background-color: #6D676E; /* Background color */
+  color: #FFFFFF; /* Text color */
+  border: none;
+  padding: 10px 20px;
+  margin: 20px auto;
+  display: block;
+  width: 200px; /* Adjust as needed */
+  cursor: pointer;
+  font-size: 16px; 
+}
+
+.gallery {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-cell {
+  width: 33.33%;
+  height: 500px;
+  margin-right: 10px;
 }
