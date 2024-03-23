@@ -75,34 +75,31 @@
 
 .services {
   display: flex;
-  overflow: hidden; /* Hide the overflowed content */
-  width: 100%; /* Make sure the services take up the rest of the space */
-  justify-content: center; /* Center the services horizontally */
+  overflow: hidden; 
+  width: 100%; 
+  justify-content: center; 
 }
 
 .service {
-  /* ... */
   text-align: center;
 }
 
 .serviceImage {
-  width: 100%; /* Set a specific width or use 100% if the parent's width is controlled */
+  width: 100%; 
   height: auto;
-  display: block; /* Remove the default inline nature of images */
+  display: block;
 }
 
-
-/* Events.module.css */
 .imageWrapper {
-  width: 400px; /* Fixed width */
-  height: 500px; /* Fixed height */
-  overflow: hidden; /* Ensures the image is cropped to fill the wrapper */
+  width: 400px; 
+  height: 500px;
+  overflow: hidden; 
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Shadow effect */
-  margin: 20px; /* Adds space around the wrapper */
-  background-position: center; /* Centers the background image */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  margin: 20px;
+  background-position: center; 
   background-size: cover; 
   position: relative;
 }
@@ -113,12 +110,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth transition */
+  opacity: 0;
+  transition: opacity 0.3s ease; 
 }
 
 .overlayText {
@@ -128,11 +125,11 @@
 }
 
 .imageWrapper:hover .overlay {
-  opacity: 1; /* Show overlay on hover */
+  opacity: 1; 
 }
 
 .footer {
-  background-color: #4A4A4A; /* Adjust to match your footer color */
+  background-color: #4A4A4A; 
   color: white;
   text-shadow: 2px 2px 0px  #05240f;
   text-align: center;
@@ -144,13 +141,13 @@
 }
 
 .bookServicesButton {
-  background-color: #6D676E; /* Background color */
-  color: #FFFFFF; /* Text color */
+  background-color: #6D676E; 
+  color: #FFFFFF;
   border: none;
   padding: 10px 20px;
   margin: 20px auto;
   display: block;
-  width: 200px; /* Adjust as needed */
+  width: 200px; 
   cursor: pointer;
   font-size: 16px; 
 }
