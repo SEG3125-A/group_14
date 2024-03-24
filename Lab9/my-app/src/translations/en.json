@@ -78,7 +78,7 @@
         "fax": "fax: 12345",
         "email": "email: photos@gmail.com"
       },
-      "bookServices": "BOOK SERVICES"
+      "'BookServices": "BOOK APPOINTMENT"
     },
     "blog": {
       "title": "Our Photo Memoir In",
