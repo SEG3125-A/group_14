@@ -53,7 +53,8 @@
       "Billing" : "Billing & Payments",
       "How" : "How-To",
       "Account" : "Delete my Account",
-      "Other" : "Other"
+      "Other" : "Other",
+      "Email" : "Email"
     },
     "events": {
       "title": "Our Photographic Services",

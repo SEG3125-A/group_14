@@ -39,7 +39,7 @@
     "contact": {
       "title": "Nous Contacter",
       "formDescription": "Complétez le formulaire et nous vous répondrons bientôt.",
-      "emailLabel": "Adresse email",
+      "emailLabel": "Adresse Courriel",
       "exampleSelectLabel": "Sélection d'exemple",
       "exampleMultipleSelectLabel": "Exemple de sélection multiple",
       "exampleTextareaLabel": "Exemple de zone de texte",
@@ -53,7 +53,8 @@
       "Billing" : "Facturation et paiements",
       "How" : "Comment faire",
       "Account" : "Supprimer mon compte",
-      "Other" : "Autre"
+      "Other" : "Autre",
+      "Email" : "Adresse Courriel"
     },
     "events": {
       "title": "Nos Services Photographiques",
