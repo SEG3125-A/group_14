@@ -1,0 +1,440 @@
+
+
+.body {
+  background-color: #656760; /* Change this to the desired background color */
+}
+
+.navbar-custom {
+  background-color: #ccd8b2; /* Change this to the desired color */
+}
+
+.carousel-item img {
+  width: 100%; /* Set the width of the image to 100% of its container */
+  height: auto; /* Maintain the aspect ratio */
+}
+.custom-prev .fas {
+  font-size: 50px; /* Adjust the font size as needed */
+}
+
+.custom-next .fas {
+  font-size: 50px; /* Adjust the font size as needed */
+}
+
+.owl-nav {
+  text-align: center;
+}
+
+.owl-nav button {
+  display: inline-block;
+  font-size: 40px; /* Adjust the font size as needed */
+  width: 40px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  line-height: 40px
+}
+
+
+/* CSS FOR MODAL */
+/* Define colour variables */
+:root {
+    --primary-color: #7c9885;
+    --background-color: #ccd8b2;
+    --inactive-color: #abb8c3;
+  }
+  
+  /* MODAL CSS */
+  #modal-back-button,
+  #appt-modal-button, 
+  #btn-appt{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important; 
+  }
+  
+  .modal-content{
+    height:700px;
+    display: flex;
+  }
+  
+  .modal_content_container {
+    flex-direction: row !important;
+  }
+  
+  #modal-guide{
+    background-color: var(--background-color);
+    width:30%;
+    height:100%;
+  }
+  
+  /* Modal Guide Section User Progress List */
+  .progress_container{
+    background-color: var(--background-color);
+    text-align: center;
+    outline: none;
+  }
+  
+  #progressList{
+    display:flex;
+    justify-content: space-between;
+    margin:10px;
+  }
+  
+  .progress-item,
+  .progress-item-complete {
+    background-color:var(--inactive-color);
+    border-radius: 25px;
+    position:relative;
+    height:6px;
+    width: 6px;
+    list-style: none;
+  }
+  
+  .progress-item-complete {
+    background-color:var(--primary-color);
+  }
+  
+  /* Modal Guide Section Title */
+  #progressTitle{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color:var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  
+  /* Modal Guide Section Description */
+  #progressDesc{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color:var(--primary-color);
+  }
+  
+  
+  /* MODAL MAIN */
+  #modal_main{
+    background-color: white;
+    width:70%;
+    height:100%;
+    overflow-y: auto;
+  }
+  
+  /* Modal Main Header */
+  #modal_main_header{
+    padding: 15px 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    color:var(--primary-color);
+  }
+
+  #services_container{
+    border:none !important; 
+    
+  }
+
+  .appt-service-item{
+    margin-bottom: 10px !important;
+    background-color:var(--primary-color) !important;
+    border-color: var(--primary-color) !important; 
+  }
+
+  /*Braider Styles */
+
+  
+  /* Form Styles */
+  .focused {
+    border: 2px solid #007bff;
+    outline: none; 
+  }
+
+  .error-message{
+    color: red;
+    font-size: 12px;
+  }
+
+  
+  /* Calendar Styles */
+  #calendar_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+  }
+  
+  #calendar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .pika-button:hover{
+    background-color: var(--primary-color) !important;
+  }
+  
+  #appt-form{
+    text-align: center;
+  }
+  
+
+  .appt-container{
+    overflow-y: scroll;
+  }
+
+  .appt-card{
+    border: none !important;
+  }
+
+  /* column and row changes for cart page to realign texts*/
+.cart-column {
+  color: black;
+  font-family: 'Proxima Nova', sans-serif;
+  flex: 2;
+  text-align: center;
+}
+
+.cart-row {
+  color: black;
+  font-family: 'Proxima Nova', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 2px solid #ddd; 
+}
+
+  /* font change */
+.cart {
+  color: black;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+/* make total look more polished */
+.cart-total {
+  font-family: 'Proxima Nova', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: #173117;
+  background-color: #eef5ee;
+  padding: 15px 30px; 
+  border-radius: 10px; 
+  margin: 20px auto;
+  display: inline-block; 
+  justify-content: flex-end;
+}
+
+body {
+  line-height: 26px;
+  background: #ffffff;
+}
+
+ .wrapper{
+  background-color: #c0eac34d;
+  background-image: linear-gradient(256deg, #79a58bf7 0%, #b8cc84 46%, #68856f 100%);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+ }
+
+ .card-img-top{
+  margin: 8px;
+  border-radius: 10px;
+  box-shadow: -5px 10px 15px rgba(0,0,0,0.4);
+ }
+
+ img {
+  width: auto;
+ }
+
+ p {
+  margin-top: 10px;
+ }
+
+ .custom-button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 130px;
+  padding: 8px 12px;
+  background: #adab6f;
+  margin: 25px 25px 0 0;
+  color:#fffffff7;
+  border-radius: 6px;
+  shape-outside: margin-box;
+  font-family: 'Proxima Nova', sans-serif;
+ }
+
+ .custom-button:hover{
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+ }
+
+ .card {
+  position: relative; /* Ensure proper positioning of arrows */
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-container {
+  width: 100%; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  position: relative;
+}
+
+.about-text {
+  text-align: center;
+  display: inline;
+  justify-content: center;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.book btn-primary{
+  display: flex;
+  justify-content: center;
+}
+
+.book btn-primary:hover{
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Add custom arrow button styles */
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.custom-prev {
+  left: 40px;
+}
+
+.custom-next {
+  right: 40px;
+}
+
+/* Style the arrow icons (you need to include Font Awesome for this) */
+.custom-prev i,
+.custom-next i {
+  color: #333; /* Change color as needed */
+}
+
+/* Optionally, you can add hover effects for better user feedback */
+.custom-prev:hover,
+.custom-next:hover {
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent background on hover */
+}
+
+
+/* 
+END OF CSS FOR MODAL */
+
+
+
+/* Start Flexbot section code (used for "BOOK HERE") Button*/
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+}
+/* End Flexbot section code */
+
+/* CSS for "View Map" Button */
+.btn-view-map {
+  background-color: var(--primary-color) !important; /* Override the default Bootstrap primary color */
+  color: white !important; /* Ensure text color is white for contrast */
+  border-color: var(--primary-color) !important; /* Match the border color with the background */
+}
+/* END of CSS for "View Map" Button */
+
+.custom-button {
+  background-color: var(--primary-color) !important; /* Change #yourColorHere to your desired color */
+  color: white; /* Optional: Change text color if needed */
+  border: none; /* Removes any border */
+}
+
+.custom-button:hover, .custom-button:focus {
+  background-color: darken(#7c9885, 10%); /* Slightly darker on hover/focus */
+}
+
+.nav-link {
+  position: relative; /* Added this line */
+  display: inline-block; /* Ensure the anchor behaves as a container */
+}
+
+.hover-services {
+  position: absolute;
+  bottom: 120%; /* Positions the text right above the image */
+  left: 50%; /* Starts the text from the middle of the image */
+  transform: translateX(-50%); /* Centers the text above the image */
+  visibility: hidden;
+  color: white;
+  background-color: #79a58bf7;
+  padding: 5px;
+  border-radius: 10px;
+  white-space: nowrap; /* Keeps the text on a single line */
+}
+
+.nav-item:hover .hover-services {
+  visibility: visible;
+}
+
+.hover-location{
+  position: absolute;
+  top: 80%; /* Adjusts vertical alignment to the middle of the parent */
+  left: 100%; /* Starts the text right after the image */
+  transform: translateY(-50%); /* Centers the text vertically relative to the image */
+  visibility: hidden;
+  color: white;
+  background-color: #79a58bf7;
+  padding: 5px;
+  border-radius: 10px;
+  white-space: nowrap; /* Keeps the text on a single line */
+}
+
+
+.hover-mission{
+  position: absolute;
+  top: 30%; /* Adjusts vertical alignment to the middle of the parent */
+  left: 100%; /* Starts the text right after the image */
+  transform: translateY(-50%); /* Centers the text vertically relative to the image */
+  visibility: hidden;
+  color: white;
+  background-color: #79a58bf7;
+  padding: 5px;
+  border-radius: 10px;
+  white-space: nowrap; /* Keeps the text on a single line */
+}
+
+.dropdown-item:hover .hover-mission {
+  visibility: visible;
+}
+.dropdown-item:hover .hover-location {
+  visibility: visible;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 3rem;
+}
