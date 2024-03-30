@@ -109,26 +109,29 @@ const Contact = () => {
               {t('pages.contact.submitButton')}
             </button>
           </form>
-          {showModal && (
-            <div className={styles.modal}>
-              <div className={styles.modalContent}>
-                <span className={styles.closeButton} onClick={() => setShowModal(false)}>
-                  &times;
-                </span>
-                <h2>Form Submission Results</h2>
-                <p>{t('pages.contact.FirstName')}: {formData.firstName}</p>
-                <p>{t('pages.contact.LastName')}: {formData.lastName}</p>
-                <p>{t('pages.contact.Email')}: {formData.email}</p>
-                <p>{t('pages.contact.Category')}: {formData.category}</p>
-                <p>{t('pages.contact.Comment')}: {formData.message}</p>
-                <button className={styles.confirmButton} onClick={() => setShowModal(false)}>
-                  Confirm Submission
-                </button>
-              </div>
-            </div>
-          )}
+          <button className="submitButton mt-3" onClick={handleSubmit}>{t('pages.contact.submitButton')}</button>
         </div>
       </div>
+
+      {/* Modal component */}
+      
+
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close-button" onClick={() => setShowModal(false)}>
+              &times;
+            </span>
+            <h2>Form Submission Results</h2>
+            {/* Display form data inside the modal */}
+            <p>{t('pages.contact.FirstName')}: : {formData.firstName}</p>
+            <p>{t('pages.contact.LastName')}: : {formData.lastName}</p>
+            <p>{t('pages.contact.Email')}: : {formData.email}</p>
+            <p>{t('pages.contact.Category')}: {formData.category}</p>
+            <p>{t('pages.contact.Comment')}: {formData.message}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
